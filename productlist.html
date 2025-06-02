@@ -55,7 +55,20 @@
           </div>
         </div>
       </div>
-      
+
+      <!-- Search Section -->
+      <div class="search-section">
+        <div class="search-container">
+          <div class="search-icon">
+            <img src="./assets/icon/search.png" alt="" />
+          </div>
+          <input
+            type="text"
+            class="search-input"
+            placeholder="Search for bracelets" />
+        </div>
+      </div>
+
       <!-- Navigation Menu -->
       <nav class="menu-navigation">
         <a href="#" class="nav-item">Shop Rings</a>
@@ -65,5 +78,79 @@
       </nav>
     </div>
     <main>
+        <!-- breadcumb -->
+      <div class="breadcrumb">
+        <div class="container">
+          <a href="#">products</a> /
+          <a href="#">Bracelets</a>
+        </div>
+      </div>
+
+      <!-- product details top -->
+      <div class="product-details-top">
+        <div class="container">
+          <div class="title">Bracelets</div>
+          <div class="sorting">
+            <div class="sorting-img">
+              <img src="./assets/icon/sorting-icon.png" alt="" />
+            </div>
+            <div class="sorting-drop-down">
+              <a href="#">Feautered</a>
+              <a href="#">Newest</a>
+              <a href="#">Price, low to high </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+ <!-- main area -->
+      <section class="main-area">
+        <div class="container">
+          <!-- sidebar -->
+          <div class="sidebar">
+            <!-- Price Filter -->
+            <div class="price-filter">
+              <div class="price-display" id="price-display">$50</div>
+
+              <div class="price-range">
+                <input
+                  type="range"
+                  id="price-slider"
+                  class="price-slider"
+                  min="0"
+                  max="100"
+                  value="50"
+                  step="1" />
+              </div>
+
+              <div class="price-inputs">
+                <input
+                  type="number"
+                  id="min-price"
+                  class="price-input"
+                  placeholder="$ 0"
+                  min="0"
+                  max="100"
+                  value="" />
+                <img src="./assets/icon/Rectangle.png" alt="" />
+                <input
+                  type="number"
+                  id="max-price"
+                  class="price-input"
+                  placeholder="$ 100"
+                  min="0"
+                  max="100"
+                  value="" />
+              </div>
+            </div>
+            <div class="filter-section">
+              <div class="filter-title" onclick="toggleFilter('price')">
+                Price
+                <span class="arrow"
+                  ><img src="./assets/icon/arrow-bottom.png" alt=""
+                /></span>
+              </div>
+              <div class="filter-content" id="price-filter"></div>
+            </div>
 </body>
 </html>
