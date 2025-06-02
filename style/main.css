@@ -376,3 +376,32 @@ input::placeholder {
 .signup-container .submit-btn:active {
   transform: translateY(0);
 }
+
+/* footer */
+.footer {
+  background-color: #fff;
+  margin: 60px 0;
+}
+.footer-inner .list-head {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #000;
+}
+.footer-inner ul{
+  padding-inline-start: 0px !important;
+}
+.footer-inner ul li {
+  list-style: none;
+  padding-bottom: 5px;
+}
+
+.footer-inner ul li a {
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #000;
+}
