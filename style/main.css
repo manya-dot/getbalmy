@@ -212,3 +212,26 @@ body {
   background: #23627c;
   color: white;
 }
+
+/* about */
+.we-are {
+  padding: 50px 0;
+  background-color: #dbe0e2;
+}
+.we-are-content {
+  text-align: center;
+}
+.we-are-content h3 {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #23627c;
+}
+.we-are-content p {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #23627c;
+}
