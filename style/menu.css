@@ -1,0 +1,143 @@
+/* main header */
+.mobile-navbar {
+  display: none;
+}
+
+/* navbar */
+.mobile-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #dbe0e2;
+  overflow: hidden;
+  padding: 60px 20px 20px;
+  transition: all ease-in 0.3s;
+  display: none;
+  z-index: 11;
+}
+
+.mobile-menu .menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+.mobile-menu .logo img {
+  width: 200px;
+}
+
+.mobile-menu .menu-icons {
+  display: flex;
+  justify-content: end;
+  gap: 15px;
+  align-items: center;
+}
+
+.mobile-menu .cart-icon,
+.mobile-menu .close-icon {
+  width: 30px;
+  cursor: pointer;
+}
+.mobile-menu .cart-icon img,
+.mobile-menu .close-icon img {
+  width: 100%;
+}
+
+.mobile-menu .search-section {
+  padding: 20px;
+  background-color: #dbe0e2;
+}
+
+.mobile-menu .search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  padding: 10px;
+}
+
+.mobile-menu .search-icon {
+  margin-top: 5px;
+}
+.mobile-menu .search-icon img {
+  width: 24px;
+}
+
+.mobile-menu .search-input {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+  outline: none;
+}
+
+.mobile-menu .search-input::placeholder {
+  color: #999;
+  font-size: 16px;
+}
+
+/* .mobile-menu .menu-navigation {
+  background-color: #fff;
+} */
+
+.mobile-menu .nav-item {
+  display: block;
+  padding: 16px 14px;
+  color: #000;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.mobile-menu .nav-item:hover {
+  background-color: #f8f9fa;
+}
+
+.mobile-menu .nav-item:last-child {
+  border-bottom: none;
+}
+
+@media (max-width: 768px) {
+  .mobile-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .mobile-navbar .second-logo img {
+    max-width: 250px !important;
+  }
+  .mobile-navbar .right-side {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 20px;
+  }
+  .mobile-navbar .right-side .three-dot {
+    padding: 0 5px;
+  }
+}
+
+@media (max-width: 600px) {
+  .mobile-navbar .second-logo img {
+    max-width: 200px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .mobile-navbar .second-logo img {
+    max-width: 200px !important;
+  }
+  .mobile-navbar .cart img {
+    max-width: 35px !important;
+  }
+  .mobile-navbar .three-dot img {
+    max-height: 35px !important;
+  }
+}
