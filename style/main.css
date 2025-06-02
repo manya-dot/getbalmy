@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
+body {
+  font-family: "Karla", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1240px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.banner {
+  height: 676px;
+  background-image: url("../assets/images/home/home-banner.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.banner-inner {
+  padding: 40px 0;
+}
+.banner .logo {
+  width: 570px;
+  padding-bottom: 30px;
+  margin: 0 auto;
+}
+.banner .logo img {
+  width: 100%;
+}
+
+.banner .banner-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.banner-content .left-content {
+  width: 490px;
+  padding-top: 20px;
+}
+.banner-content .left-content h3 {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 100%;
+  letter-spacing: normal;
+  color: #23627c;
+  margin-bottom: 10px;
+}
+.banner-content .left-content p {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: normal;
+  color: #23627c;
+  margin-bottom: 10px;
+}
+.banner-content .left-content .discover_btn {
+  display: inline-block;
+  width: 218px;
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #23627c;
+  border-radius: 20px;
+  text-align: center;
+  align-self: center;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: normal;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.banner-content .right-content {
+  width: 205px;
+  position: absolute;
+  right: 0;
+  bottom: -45px;
+}
+.right-content a {
+  padding: 5px 0;
+  border-bottom: 1px solid #23627c;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+}
+.right-content a span {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: normal;
+  color: #23627c;
+}
