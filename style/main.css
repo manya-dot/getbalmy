@@ -235,3 +235,44 @@ body {
   letter-spacing: 0%;
   color: #23627c;
 }
+
+/* categories */
+.categories {
+  padding: 40px 0;
+  background-color: #ffffff;
+}
+.categories-inner h3 {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #23627c;
+}
+.categories-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.categories-item {
+  height: 280px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.categories-btn {
+  width: 280px;
+  padding: 10px 20px;
+  border-radius: 30px;
+  background-color: #85acbb;
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-decoration: none;
+}
