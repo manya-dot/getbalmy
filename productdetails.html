@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Balmy - Product Details</title>
+    <link rel="stylesheet" href="./style/productDetails.css">
+    <link rel="stylesheet" href="./style/common.css">
+    <link rel="stylesheet" href="./style/sidebar.css">
+    <link rel="stylesheet" href="./style/header.css">
+
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css">
+</head>
+
+<body>
+    <div class="menu-overlay" id="menu-overlay"></div>
+    <header class="header">
+        <!-- large device -->
+        <div class="container">
+            <div class="three-dot" id="large-three-dot">
+                <img src="./assets/images/menu.png" alt="">
+            </div>
+            <div class="second-logo" onclick="window.location.href='index.html'">
+                <img src="./assets/images/second-logo.png" alt="">
+            </div>
+            <div class="cart" onclick="window.location.href='cart.html'">
+                <img src="./assets/images/basket icon.png" alt="">
+            </div>
+        </div>
+        <!-- mobile navbar -->
+        <div class="mobile-navbar">
+            <div class="left-side">
+                <div class="second-logo" onclick="window.location.href='index.html'">
+                    <img src="./assets/images/second-logo.png" alt="">
+                </div>
+            </div>
+
+            <div class="right-side">
+                <div class="cart" onclick="window.location.href='cart.html'">
+                    <img src="./assets/images/basket icon.png" alt="">
+                </div>
+                <div class="three-dot" id="three-dot">
+                    <img src="./assets/images/menu.png" alt="">
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- mobile menu -->
+    <div class="mobile-menu">
+        <!-- Header with Logo and Icons -->
+        <div class="menu-header">
+            <div class="logo" onclick="window.location.href='index.html'">
+                <img src="./assets/images/second-logo.png" alt="">
+            </div>
+            <div class="menu-icons">
+                <div class="cart-icon" onclick="window.location.href='cart.html'">
+                    <img src="./assets/images/basket icon.png" alt="">
+                </div>
+                <div class="close-icon" id="close-icon">
+                    <img src="./assets/icon/cross.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <!-- Search Section -->
+        <div class="search-section">
+            <div class="search-container">
+                <div class="search-icon"> <img src="./assets/icon/search.png" alt=""></div>
+                <input type="text" class="search-input" placeholder="Search for bracelets">
+            </div>
+        </div>
+
+        <!-- Navigation Menu -->
+        <nav class="menu-navigation">
+            <a href="#" class="nav-item">Shop Rings</a>
+            <a href="#" class="nav-item">Shop Bracelets</a>
+            <a href="#" class="nav-item">Shop Necklaces</a>
+            <a href="#" class="nav-item">Shop Accessories</a>
+        </nav>
+    </div>
+
+    
+</body>
+</html>
