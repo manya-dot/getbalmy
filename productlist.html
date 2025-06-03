@@ -372,5 +372,108 @@
       </div>
     </footer>
 
+    <script>
+      // Price slider functionality
+      const priceSlider = document.getElementById("price-slider");
+      const priceDisplay = document.getElementById("price-display");
+      const minPriceInput = document.getElementById("min-price");
+      const maxPriceInput = document.getElementById("max-price");
+
+      priceSlider.addEventListener("input", function () {
+        const value = this.value;
+        priceDisplay.textContent = `$${value}`;
+      });
+
+      minPriceInput.addEventListener("input", function () {
+        const minValue = parseInt(this.value) || 0;
+        const maxValue = parseInt(maxPriceInput.value) || 100;
+
+        if (minValue <= maxValue) {
+          priceSlider.min = minValue;
+          filterProducts();
+        }
+      });
+
+      maxPriceInput.addEventListener("input", function () {
+        const maxValue = parseInt(this.value) || 100;
+        const minValue = parseInt(minPriceInput.value) || 0;
+
+        if (maxValue >= minValue) {
+          priceSlider.max = maxValue;
+          filterProducts();
+        }
+      });
+
+      // Filter toggle functionality
+      function toggleFilter(filterType) {
+        const title = document.querySelector(
+          `[onclick="toggleFilter('${filterType}')"]`
+        );
+        const content = document.getElementById(`${filterType}-filter`);
+
+        title.classList.toggle("collapsed");
+        if (title.classList.contains("collapsed")) {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      }
+
+      // Product quantity functionality
+      document.addEventListener("click", function (e) {
+        if (e.target.closest(".minus-btn")) {
+          const quantityElement = e.target
+            .closest(".quantity")
+            .querySelector("p");
+          let quantity = parseInt(quantityElement.textContent);
+          if (quantity > 0) {
+            quantityElement.textContent = quantity - 1;
+          }
+        }
+
+        if (e.target.closest(".plus-btn")) {
+          const quantityElement = e.target
+            .closest(".quantity")
+            .querySelector("p");
+          let quantity = parseInt(quantityElement.textContent);
+          quantityElement.textContent = quantity + 1;
+        }
+      });
+
+      // Sorting toggle functionality
+      document.addEventListener("click", function (e) {
+        const sortingImg = document.querySelector(".sorting-img");
+        const dropdown = document.querySelector(".sorting-drop-down");
+
+        if (sortingImg.contains(e.target)) {
+          if (dropdown.style.display === "flex") {
+            dropdown.style.display = "none";
+          } else {
+            dropdown.style.display = "flex";
+          }
+        } else if (!dropdown.contains(e.target)) {
+          dropdown.style.display = "none";
+        }
+      });
+
+      // Filter products based on selected criteria
+      function filterProducts() {
+        const minPrice = parseInt(minPriceInput.value) || 0;
+        const maxPrice = parseInt(maxPriceInput.value) || 100;
+        const products = document.querySelectorAll(".product-item");
+
+        products.forEach((product) => {
+          const priceText = product.querySelector(".price").textContent;
+          const price = parseInt(priceText.replace("$", "").trim());
+
+          const priceMatch = price >= minPrice && price <= maxPrice;
+        });
+      }
+
+      // Initialize filters
+      filterProducts();
+    </script>
+
+    <script src="script/menu.js"></script>
 </body>
 </html>
