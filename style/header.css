@@ -1,0 +1,235 @@
+/* main header */
+.header {
+  padding: 10px 0;
+  background-color: #dbe0e2;
+}
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.large-sidebar {
+  cursor: pointer;
+}
+.logo {
+  cursor: pointer;
+}
+.second-logo {
+  max-width: 320px;
+  width: 100%;
+  cursor: pointer;
+}
+.second-logo img {
+  width: 100%;
+}
+.header .cart {
+  cursor: pointer;
+}
+.three-dot {
+  padding: 0 5px;
+  cursor: pointer;
+}
+
+.mobile-navbar {
+  display: none;
+}
+
+/* নতুন class add করুন */
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+}
+
+.menu-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* navbar */
+.mobile-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #dbe0e2;
+  overflow: hidden;
+  padding: 60px 20px 20px;
+  transition: all ease-in 0.3s;
+  z-index: 11;
+  transform: translateY(-100%);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.mobile-menu.active {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-menu .menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+.mobile-menu .logo img {
+  width: 200px;
+}
+
+.mobile-menu .menu-icons {
+  display: flex;
+  justify-content: end;
+  gap: 15px;
+  align-items: center;
+}
+
+.mobile-navbar .cart img,
+.mobile-navbar .three-dot img,
+.mobile-menu .cart-icon img,
+.mobile-menu .close-icon img {
+  object-fit: contain;
+}
+
+.mobile-menu .cart-icon,
+.mobile-menu .close-icon {
+  width: 35px;
+  cursor: pointer;
+}
+.mobile-menu .cart-icon img,
+.mobile-menu .close-icon img {
+  width: 100%;
+}
+
+.mobile-menu .search-section {
+  padding: 20px;
+  background-color: #dbe0e2;
+}
+
+.mobile-menu .search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  padding: 10px;
+}
+
+.mobile-menu .search-icon {
+  margin-top: 5px;
+}
+.mobile-menu .search-icon img {
+  width: 24px;
+}
+
+.mobile-menu .search-input {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+  outline: none;
+}
+
+.mobile-menu .search-input::placeholder {
+  color: #999;
+  font-size: 16px;
+}
+
+.mobile-menu .nav-item {
+  display: block;
+  padding: 16px 14px;
+  color: #000;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.mobile-menu .nav-item:hover {
+  background-color: #f8f9fa;
+}
+
+.mobile-menu .nav-item:last-child {
+  border-bottom: none;
+}
+
+@media (max-width: 768px) {
+  .header .container {
+    display: none;
+  }
+  .header .mobile-navbar {
+    padding: 30px 20px 10px;
+  }
+  .mobile-menu {
+    padding: 38px 20px 20px;
+  }
+  .mobile-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .mobile-navbar .second-logo img {
+    max-width: 220px !important;
+  }
+  .mobile-navbar .right-side {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 20px;
+  }
+  .mobile-navbar .cart img {
+    max-width: 35px !important;
+  }
+  .mobile-navbar .right-side .three-dot {
+    text-align: center;
+    width: 35px;
+    box-sizing: border-box;
+  }
+  .mobile-navbar .three-dot img {
+    max-height: 35px !important;
+  }
+  .mobile-menu .cart-icon,
+  .mobile-menu .close-icon {
+    width: 35px;
+  }
+}
+
+@media (max-width: 600px) {
+  .mobile-navbar .second-logo img {
+    max-width: 180px !important;
+  }
+  .mobile-navbar .cart img {
+    max-width: 30px !important;
+  }
+    .mobile-navbar .right-side .three-dot {
+    width: 30px;
+  }
+  .mobile-navbar .three-dot img {
+    max-height: 30px !important;
+  }
+  .mobile-menu .cart-icon,
+  .mobile-menu .close-icon {
+    width: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mobile-navbar .cart img {
+    max-width: 35px !important;
+  }
+  .mobile-navbar .three-dot img {
+    max-height: 35px !important;
+  }
+}
