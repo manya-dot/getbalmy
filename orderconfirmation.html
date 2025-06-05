@@ -108,6 +108,144 @@
             </div>
         </div>
     </div>
+
+    <!-- main area -->
+    <main>
+        <section class="order">
+            <div class="container">
+                <h3>Thank You!</h3>
+                <p>Order #XYS1234</p>
+            </div>
+        </section>
+
+        <section class="order-summary-section">
+            <div class="container">
+                <div class="order-info-header">
+                    <div class="order-details">
+                        <h4>Order Details</h4>
+                        <div class="order-meta">
+                            <div class="meta-item">
+                                <span class="label">Order Date:</span>
+                                <span class="value" id="order-date">--</span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="label">Status:</span>
+                                <span class="value status">Confirmed</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Order Items Table -->
+                <div class="order-items-table">
+                    <div class="table-header">
+                        <div class="header-item">Item</div>
+                        <div class="header-price">Price</div>
+                        <div class="header-qty">Qty</div>
+                        <div class="header-total">Total</div>
+                    </div>
+                    <div class="table-body" id="order-items-table">
+                    </div>
+                </div>
+
+                <!-- Order Summary -->
+                <div class="order-summary-footer">
+                    <div class="summary-content">
+                        <div class="summary-row">
+                            <span>Subtotal:</span>
+                            <span id="summary-subtotal">$0</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Shipping:</span>
+                            <span>FREE</span>
+                        </div>
+                        <div class="summary-row total-row">
+                            <span>Total:</span>
+                            <span id="summary-total">$0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- footer -->
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <ul>
+                    <li class="list-head">Links</li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Terms and Conditions</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script/common.js"></script>
+    <script src="script/sidebar.js"></script>
+
+    <script>
+        let orderData = null;
+
+        function loadOrderSummary() {
+            orderData = JSON.parse(localStorage.getItem('lastOrder')) || null;
+
+            if (!orderData) {
+                window.location.href = 'index.html';
+                return;
+            }
+            document.getElementById('order-date').textContent = new Date(orderData.orderDate).toLocaleDateString();
+
+            renderOrderItemsTable();
+            updateOrderSummaryTotals();
+        }
+
+        function renderOrderItemsTable() {
+            const tableBody = document.getElementById('order-items-table');
+
+            if (!orderData || orderData.items.length === 0) {
+                tableBody.innerHTML = '<div class="empty-message">No order items found</div>';
+                return;
+            }
+
+            tableBody.innerHTML = orderData.items.map(item => `
+        <div class="order-item-row">
+            <div class="item-info">
+                <img src="${item.image}" alt="${item.name}" class="item-image">
+                <div class="item-details">
+                    <h5>${item.name}</h5>
+                    <p class="item-color">${item.color.replace('-', ' ')}</p>
+                </div>
+            </div>
+            <div class="item-price">$${item.price}</div>
+            <div class="item-qty">${item.quantity}</div>
+            <div class="item-total">$${item.price * item.quantity}</div>
+            <div class="mobile-item-details">
+                <span>Price: $${item.price}</span>
+                <span>Qty: ${item.quantity}</span>
+                <span>Total: $${item.price * item.quantity}</span>
+            </div>
+        </div>
+    `).join('');
+        }
+
+        function updateOrderSummaryTotals() {
+            if (!orderData) return;
+
+            const subtotal = orderData.total;
+
+            document.getElementById('summary-subtotal').textContent = `$${subtotal}`;
+            document.getElementById('summary-total').textContent = `$${subtotal}`;
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            loadOrderSummary();
+        });
+    </script>
     
 </body>
 </html>
