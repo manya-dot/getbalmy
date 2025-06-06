@@ -213,6 +213,485 @@
             </div>
         </div>
     </footer>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <ul>
+                    <li class="list-head">Links</li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Terms and Conditions</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script/common.js"></script>
+    <script src="script/sidebar.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+
+    <script>
+        const products = [
+            {
+                id: 1,
+                name: "Boho Bracelet",
+                price: 77,
+                image: "./assets/images/products/Default.png",
+                colors: ["gold", "silver"],
+                selectedColor: "gold",
+                quantity: 0,
+                category: "bracelet",
+                images: [
+                    './assets/images/product-detais/image 18.png',
+                    './assets/images/product-detais/image 14.png',
+                    './assets/images/product-detais/image 16.png',
+                    './assets/images/product-detais/image 17.png'
+                ]
+            },
+            {
+                id: 2,
+                name: "Original Bracelet",
+                price: 67,
+                image: "./assets/images/product-detais/image 19.png",
+                colors: ["gold", "silver"],
+                selectedColor: "gold",
+                quantity: 0,
+                category: "bracelet",
+                images: [
+                    './assets/images/product-detais/image 19.png',
+                    './assets/images/product-detais/image 24.png',
+                    './assets/images/product-detais/image 26.png',
+                    './assets/images/product-detais/image 28.png'
+                ]
+            },
+            {
+                id: 3,
+                name: "Surf Bracelet",
+                price: 57,
+                image: "./assets/images/products/image 12.png",
+                colors: ["gold", "silver"],
+                selectedColor: "gold",
+                quantity: 0,
+                category: "bracelet",
+                images: [
+                    './assets/images/product-detais/image 18.png',
+                    './assets/images/product-detais/image 14.png',
+                    './assets/images/product-detais/image 16.png',
+                    './assets/images/product-detais/image 17.png'
+                ]
+            },
+            {
+                id: 4,
+                name: "Gummy Bracelet",
+                price: 77,
+                image: "./assets/images/product-detais/image 19.png",
+                colors: ["gold", "silver"],
+                selectedColor: "gold",
+                quantity: 0,
+                category: "bracelet",
+                images: [
+                    './assets/images/product-detais/image 19.png',
+                    './assets/images/product-detais/image 24.png',
+                    './assets/images/product-detais/image 26.png',
+                    './assets/images/product-detais/image 28.png'
+                ]
+            },
+            {
+                id: 5,
+                name: "Love Bracelet",
+                price: 67,
+                image: "./assets/images/products/Surf Bracelet.png",
+                colors: ["rose-gold", "silver"],
+                selectedColor: "rose-gold",
+                quantity: 0,
+                category: "bracelet",
+                images: [
+                    './assets/images/product-detais/image 18.png',
+                    './assets/images/product-detais/image 14.png',
+                    './assets/images/product-detais/image 16.png',
+                    './assets/images/product-detais/image 17.png'
+                ]
+            },
+            {
+                id: 6,
+                name: "Palm Bracelet",
+                price: 57,
+                image: "./assets/images/product-detais/image 19.png",
+                colors: ["rose-gold", "silver"],
+                selectedColor: "rose-gold",
+                quantity: 0,
+                category: "bracelet",
+                images: [
+                    './assets/images/product-detais/image 19.png',
+                    './assets/images/product-detais/image 24.png',
+                    './assets/images/product-detais/image 26.png',
+                    './assets/images/product-detais/image 28.png'
+                ]
+            }
+        ];
+
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        let currentProduct = null;
+        let currentImageIndex = 0;
+
+        function addToCart(productId, color, quantity = 1) {
+            const product = products.find(p => p.id === productId);
+            if (!product) return;
+
+            const existingItem = cart.find(item =>
+                item.productId === productId && item.color === color
+            );
+
+            if (existingItem) {
+                existingItem.quantity += quantity;
+            } else {
+                cart.push({
+                    productId: productId,
+                    name: product.name,
+                    price: product.price,
+                    image: product.image,
+                    color: color,
+                    quantity: quantity
+                });
+            }
+
+            saveCartToStorage();
+            updateCartDisplay();
+        }
+
+        function removeFromCart(productId, color, quantity = 1) {
+            const itemIndex = cart.findIndex(item =>
+                item.productId === productId && item.color === color
+            );
+
+            if (itemIndex !== -1) {
+                cart[itemIndex].quantity -= quantity;
+
+                if (cart[itemIndex].quantity <= 0) {
+                    cart.splice(itemIndex, 1);
+                }
+            }
+
+            saveCartToStorage();
+            updateCartDisplay();
+        }
+
+        function saveCartToStorage() {
+            localStorage.setItem('cart', JSON.stringify(cart));
+        }
+
+        function updateCartDisplay() {
+            const totalQuantity = cart.reduce((sum, item) => sum + item.quantity, 0);
+
+            const cartBadges = ['cart-badge', 'mobile-cart-badge', 'menu-cart-badge'];
+            cartBadges.forEach(badgeId => {
+                const badge = document.getElementById(badgeId);
+                if (badge) {
+                    badge.textContent = totalQuantity;
+                    if (totalQuantity === 0) {
+                        badge.classList.add('hidden');
+                    } else {
+                        badge.classList.remove('hidden');
+                    }
+                }
+            });
+        }
+
+        function loadCartCount() {
+            const savedCart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart = savedCart;
+            updateCartDisplay();
+        }
+
+        function getProductFromURL() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const productId = parseInt(urlParams.get('id'));
+            return products.find(p => p.id === productId);
+        }
+
+        function loadProductData() {
+            currentProduct = getProductFromURL();
+
+            if (!currentProduct) {
+                console.error('Product not found!');
+                return;
+            }
+
+            document.querySelector('.product-title').textContent = currentProduct.name;
+            document.querySelector('.product-price').textContent = `$ ${currentProduct.price}`;
+
+            loadColorOptions();
+            initializeImageGallery();
+            loadCartFromStorage();
+            updateQuantityDisplay();
+        }
+
+        function loadColorOptions() {
+            const colorContainer = document.querySelector('.color-options');
+
+            colorContainer.innerHTML = currentProduct.colors.map(color => `
+        <div class="color-dot ${color} ${color === currentProduct.selectedColor ? 'active' : ''}" 
+             data-color="${color}" 
+             onclick="selectProductColor('${color}')"></div>
+    `).join('');
+        }
+
+        function selectProductColor(color) {
+            currentProduct.selectedColor = color;
+
+            document.querySelectorAll('.color-dot').forEach(dot => {
+                dot.classList.remove('active');
+                if (dot.dataset.color === color) {
+                    dot.classList.add('active');
+                }
+            });
+
+            updateQuantityFromCart();
+        }
+
+        function updateQuantityDisplay() {
+            document.getElementById('quantity').textContent = currentProduct.quantity;
+        }
+
+        function updateQuantityFromCart() {
+            const totalQuantity = cart
+                .filter(item => item.productId === currentProduct.id)
+                .reduce((total, item) => total + item.quantity, 0);
+
+            currentProduct.quantity = totalQuantity;
+            updateQuantityDisplay();
+        }
+
+        function changeProductQuantity(change) {
+            const newQuantity = Math.max(0, currentProduct.quantity + change);
+
+            if (change > 0) {
+                addToCart(currentProduct.id, currentProduct.selectedColor, change);
+            } else if (change < 0 && currentProduct.quantity > 0) {
+                removeFromCart(currentProduct.id, currentProduct.selectedColor, Math.abs(change));
+            }
+
+            currentProduct.quantity = newQuantity;
+            updateQuantityDisplay();
+        }
+
+        function loadCartFromStorage() {
+            cart = JSON.parse(localStorage.getItem('cart')) || [];
+            updateQuantityFromCart();
+        }
+
+        function initializeImageGallery() {
+            if (!currentProduct || !currentProduct.images) return;
+
+            const mainImage = document.querySelector('.swiper-slide img');
+            const thumbnailContainer = document.querySelector('.thumbnail-container');
+
+            if (window.innerWidth > 768) {
+                currentImageIndex = 0;
+                mainImage.src = currentProduct.images[currentImageIndex];
+
+                thumbnailContainer.innerHTML = currentProduct.images.map((image, index) => `
+            <div class="thumbnail ${index === 0 ? 'active' : ''}" data-slide="${index}">
+                <img src="${image}" alt="Thumbnail ${index + 1}">
+            </div>
+        `).join('');
+
+                setupThumbnailEvents();
+                setupArrowNavigation();
+            } else {
+                initializeMobileSwiper();
+            }
+        }
+
+        function initializeMobileSwiper() {
+            if (window.innerWidth <= 768) {
+                const swiper = new Swiper('.productSwiper', {
+                    spaceBetween: 15,
+                    loop: false,
+                    freeMode: true,
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,
+                    },
+                    breakpoints: {
+                        320: {
+                            slidesPerView: 1,
+                            spaceBetween: 10
+                        },
+                        480: {
+                            slidesPerView: .9,
+                            spaceBetween: 15
+                        },
+                        576: {
+                            slidesPerView: 1,
+                            spaceBetween: 15
+                        },
+                        700: {
+                            slidesPerView: 1.3,
+                            spaceBetween: 15
+                        },
+                    }
+                });
+
+                if (currentProduct && currentProduct.images) {
+                    const swiperWrapper = document.querySelector('.swiper-wrapper');
+                    swiperWrapper.innerHTML = currentProduct.images.map((image, index) => `
+                <div class="swiper-slide">
+                    <img src="${image}" alt="Product Image ${index + 1}">
+                </div>
+            `).join('');
+
+                    swiper.update();
+                }
+            }
+        }
+
+        function setupThumbnailEvents() {
+            const thumbnails = document.querySelectorAll('.thumbnail');
+
+            thumbnails.forEach((thumb, index) => {
+                thumb.addEventListener('click', () => {
+                    currentImageIndex = index;
+                    updateMainImage();
+                    updateActiveThumbnail();
+                });
+            });
+        }
+
+        function setupArrowNavigation() {
+            const prevBtn = document.querySelector('.swiper-button-prev');
+            const nextBtn = document.querySelector('.swiper-button-next');
+
+            if (prevBtn) {
+                prevBtn.onclick = function (e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+
+                    if (currentImageIndex === 0) {
+                        currentImageIndex = currentProduct.images.length - 1;
+                    } else {
+                        currentImageIndex = currentImageIndex - 1;
+                    }
+                    updateMainImage();
+                    updateActiveThumbnail();
+                };
+            }
+
+            if (nextBtn) {
+                nextBtn.onclick = function (e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+
+                    if (currentImageIndex === currentProduct.images.length - 1) {
+                        currentImageIndex = 0;
+                    } else {
+                        currentImageIndex = currentImageIndex + 1;
+                    }
+                    updateMainImage();
+                    updateActiveThumbnail();
+                };
+            }
+        }
+
+        function setupMobileSwipe() {
+            let startX = 0;
+            let currentX = 0;
+            let isDragging = false;
+
+            const swiperContainer = document.querySelector('.swiper');
+
+            if (swiperContainer) {
+                swiperContainer.addEventListener('touchstart', (e) => {
+                    startX = e.touches[0].clientX;
+                    isDragging = true;
+                });
+
+                swiperContainer.addEventListener('touchmove', (e) => {
+                    if (!isDragging) return;
+                    currentX = e.touches[0].clientX;
+                });
+
+                swiperContainer.addEventListener('touchend', () => {
+                    if (!isDragging) return;
+                    handleSwipe();
+                    isDragging = false;
+                });
+
+                swiperContainer.addEventListener('mousedown', (e) => {
+                    startX = e.clientX;
+                    isDragging = true;
+                    e.preventDefault();
+                });
+
+                swiperContainer.addEventListener('mousemove', (e) => {
+                    if (!isDragging) return;
+                    currentX = e.clientX;
+                });
+
+                swiperContainer.addEventListener('mouseup', () => {
+                    if (!isDragging) return;
+                    handleSwipe();
+                    isDragging = false;
+                });
+
+                swiperContainer.addEventListener('dragstart', (e) => {
+                    e.preventDefault();
+                });
+            }
+
+            function handleSwipe() {
+                const diffX = startX - currentX;
+                const threshold = 50;
+
+                if (Math.abs(diffX) > threshold) {
+                    if (diffX > 0) {
+                        currentImageIndex = currentImageIndex === currentProduct.images.length - 1 ?
+                            0 : currentImageIndex + 1;
+                    } else {
+                        currentImageIndex = currentImageIndex === 0 ?
+                            currentProduct.images.length - 1 : currentImageIndex - 1;
+                    }
+                    updateMainImage();
+                    updateActiveThumbnail();
+                }
+            }
+        }
+
+        function updateMainImage() {
+            const mainImage = document.querySelector('.swiper-slide img');
+            mainImage.src = currentProduct.images[currentImageIndex];
+        }
+
+        function updateActiveThumbnail() {
+            const thumbnails = document.querySelectorAll('.thumbnail');
+            thumbnails.forEach((thumb, index) => {
+                thumb.classList.toggle('active', index === currentImageIndex);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            loadCartCount();
+            loadProductData();
+
+            window.addEventListener('resize', function () {
+                if (currentProduct) {
+                    initializeImageGallery();
+                }
+            });
+
+            document.getElementById('decrease').addEventListener('click', function () {
+                changeProductQuantity(-1);
+            });
+
+            document.getElementById('increase').addEventListener('click', function () {
+                changeProductQuantity(1);
+            });
+        });
+
+
+    </script>
     
 </body>
 </html>
