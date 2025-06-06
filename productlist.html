@@ -11,471 +11,746 @@
 </head>
 
 <body>
-    <header class="header">
+  <div class="menu-overlay" id="menu-overlay"></div>
+  <header class="header">
+      <!-- large device -->
       <div class="container">
-        <div class="three-dot">
-          <img src="./assets/images/menu.png" alt="" />
-        </div>
+          <div class="three-dot" id="large-three-dot">
+              <img src="./assets/images/menu.png" alt="">
+          </div>
+          <div class="second-logo" onclick="window.location.href='index.html'">
+              <img src="./assets/images/second-logo.png" alt="">
+          </div>
+          <div class="cart" onclick="window.location.href='cart.html'">
+              <img src="./assets/images/basket icon.png" alt="">
+              <span class="cart-badge" id="cart-badge">0</span>
+          </div>
+      </div>
+
+    <!-- Mobile Navbar -->
+    <div class="mobile-navbar">
+      <div class="left-side">
         <div class="second-logo">
-          <img src="./assets/images/second-logo.png" alt="" />
-        </div>
-        <div class="cart">
+          <div class="second-logo" onclick="window.location.href='index.html'">
+                  <img src="./assets/images/second-logo.png" alt="">
+            </div>
+      </div>
+
+      <div class="right-side">
+        <div class="cart" onclick="window.location.href='cart.html'">
           <img src="./assets/images/basket icon.png" alt="" />
         </div>
-      </div>
-      <!-- mobile navbar -->
-      <div class="mobile-navbar">
-        <div class="left-side">
-          <div class="second-logo">
-            <img src="./assets/images/second-logo.png" alt="" />
-          </div>
+        <div class="three-dot" id="three-dot">
+          <img src="./assets/images/menu.png" alt="" />
         </div>
+      </div>
+    </div>
+  </header>
 
-        <div class="right-side">
-          <div class="cart">
-            <img src="./assets/images/basket icon.png" alt="" />
-          </div>
-          <div class="three-dot" id="three-dot">
-            <img src="./assets/images/menu.png" alt="" />
-          </div>
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <div class="menu-header">
+      <div class="logo" onclick="window.location.href='index.html'">
+        <img src="./assets/images/second-logo.png" alt="" />
+      </div>
+      <div class="menu-icons" onclick="window.location.href='cart.html'">
+        <div class="cart-icon">
+          <img src="./assets/images/basket icon.png" alt="" />
+        </div>
+        <div class="close-icon" id="close-icon">
+          <img src="./assets/icon/cross.png" alt="" />
         </div>
       </div>
-    </header>
-    <!-- Mobile Menu -->
-    <div class="mobile-menu">
-      <!-- Header with Logo and Icons -->
-      <div class="menu-header">
-        <div class="logo">
-          <img src="./assets/images/second-logo.png" alt="" />
+    </div>
+
+    <!-- Search Section -->
+    <div class="search-section">
+      <div class="search-container">
+        <div class="search-icon">
+          <img src="./assets/icon/search.png" alt="" />
         </div>
-        <div class="menu-icons">
-          <div class="cart-icon">
-            <img src="./assets/images/basket icon.png" alt="" />
-          </div>
-          <div class="close-icon" id="close-icon">
-            <img src="./assets/icon/cross.png" alt="" />
-          </div>
+        <input
+          type="text"
+          class="search-input"
+          placeholder="Search for bracelets" />
+      </div>
+    </div>
+
+    <!-- Navigation Menu -->
+    <nav class="menu-navigation">
+      <a href="#" class="nav-item">Shop Rings</a>
+      <a href="#" class="nav-item">Shop Bracelets</a>
+      <a href="#" class="nav-item">Shop Necklaces</a>
+      <a href="#" class="nav-item">Shop Accessories</a>
+    </nav>
+  </div>
+  <!-- Large Device large-sidebar -->
+  <div class="large-sidebar-overlay" id="large-sidebar-overlay">
+    <div class="large-sidebar" id="large-sidebar">
+      <div class="large-sidebar-header">
+        <div class="close-large-sidebar" id="close-large-sidebar">
+            <img src="./assets/icon/cross.png" alt="close">
         </div>
       </div>
 
-      <!-- Search Section -->
       <div class="search-section">
         <div class="search-container">
-          <div class="search-icon">
-            <img src="./assets/icon/search.png" alt="" />
-          </div>
-          <input
-            type="text"
-            class="search-input"
-            placeholder="Search for bracelets" />
+            <div class="search-icon">
+                <img src="./assets/icon/search.png" alt="">
+            </div>
+            <input type="text" class="search-input" placeholder="Search for bracelets">
         </div>
       </div>
 
-      <!-- Navigation Menu -->
-      <nav class="menu-navigation">
-        <a href="#" class="nav-item">Shop Rings</a>
-        <a href="#" class="nav-item">Shop Bracelets</a>
-        <a href="#" class="nav-item">Shop Necklaces</a>
-        <a href="#" class="nav-item">Shop Accessories</a>
-      </nav>
+      <div class="large-sidebar-menu">
+          <a href="#" class="large-sidebar-item">Shop Rings</a>
+          <a href="#" class="large-sidebar-item">Shop Bracelets</a>
+          <a href="#" class="large-sidebar-item">Shop Necklaces</a>
+          <a href="#" class="large-sidebar-item">Shop Accessories</a>
+      </div>
+
+      <div class="large-sidebar-footer">
+        <div class="social-icons">
+          <img src="./assets/icon/instagram.png" alt="Instagram">
+          <img src="./assets/icon/message.png" alt="Email">
+        </div>
+      </div>
     </div>
-    <main>
-        <!-- breadcumb -->
-      <div class="breadcrumb">
-        <div class="container">
-          <a href="#">products</a> /
+  </div>
+  
+  <main>
+      <!-- Breadcumb -->
+    <div class="breadcrumb">
+      <div class="container">
+        <div class="breadcrumb-content">
+          <a href="#">Products/</a>
           <a href="#">Bracelets</a>
         </div>
       </div>
+    </div>
 
-      <!-- product details top -->
-      <div class="product-details-top">
-        <div class="container">
-          <div class="title">Bracelets</div>
-          <div class="sorting">
-            <div class="sorting-img">
-              <img src="./assets/icon/sorting-icon.png" alt="" />
-            </div>
-            <div class="sorting-drop-down">
-              <a href="#">Featured</a>
-              <a href="#">Newest</a>
-              <a href="#">Price, low to high </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
- <!-- main area -->
-      <section class="main-area">
-        <div class="container">
-          <!-- sidebar -->
-          <div class="sidebar">
-            <!-- Price Filter -->
-            <div class="price-filter">
-              <div class="price-display" id="price-display">$50</div>
-
-              <div class="price-range">
-                <input
-                  type="range"
-                  id="price-slider"
-                  class="price-slider"
-                  min="0"
-                  max="100"
-                  value="50"
-                  step="1" />
-              </div>
-
-              <div class="price-inputs">
-                <input
-                  type="number"
-                  id="min-price"
-                  class="price-input"
-                  placeholder="$ 0"
-                  min="0"
-                  max="100"
-                  value="" />
-                <img src="./assets/icon/Rectangle.png" alt="" />
-                <input
-                  type="number"
-                  id="max-price"
-                  class="price-input"
-                  placeholder="$ 100"
-                  min="0"
-                  max="100"
-                  value="" />
-              </div>
-            </div>
-            <div class="filter-section">
-              <div class="filter-title" onclick="toggleFilter('price')">
-                Price
-                <span class="arrow"
-                  ><img src="./assets/icon/arrow-bottom.png" alt=""
-                /></span>
-              </div>
-              <div class="filter-content" id="price-filter"></div>
-            </div>
-
-            <!-- Color Filter -->
-            <div class="filter-section">
-              <div class="filter-title" onclick="toggleFilter('color')">
-                Colour
-                <span class="arrow"
-                  ><img src="./assets/icon/arrow-bottom.png" alt=""
-                /></span>
-              </div>
-              <div class="filter-content" id="color-filter">
-                <div class="color-filter">
-                  <div class="color-options">
-                    <ul>
-                      <li class="color-option selected" data-color="gold">
-                        <span class="color-label">gold</span>
-                      </li>
-                      <li class="color-option" data-color="silver">
-                        <span class="color-label">silver</span>
-                      </li>
-                      <li class="color-option" data-color="rose-gold">
-                        <span class="color-label">rose gold</span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- product list are -->
-          <div class="product-list">
-            <!-- product item -->
-            <div class="product-item">
-              <img src="./assets/images/products/Default.png" alt="product 1" />
-              <div class="product-content">
-                <h4 class="name">Boho Bracelet</h4>
-                <p class="price">$ 77</p>
-                <!-- Color Selection -->
-                <div class="color-selection">
-                  <div
-                    class="color-option color-gold selected"
-                    data-color="gold"
-                    title="Gold"></div>
-                  <div
-                    class="color-option color-silver"
-                    data-color="silver"
-                    title="Silver"></div>
-                </div>
-              </div>
-              <div class="quantity">
-                <button class="quantity-btn minus-btn">
-                  <img src="./assets/icon/minus.png" alt="" />
-                </button>
-
-                <p>0</p>
-                <button class="quantity-btn plus-btn">
-                  <img src="./assets/icon/plus.png" alt="" />
-                </button>
-              </div>
-            </div>
-            <div class="product-item">
-              <img src="./assets/images/products/Default.png" alt="product 1" />
-              <div class="product-content">
-                <h4 class="name">Boho Bracelet</h4>
-                <p class="price">$ 77</p>
-                <!-- Color Selection -->
-                <div class="color-selection">
-                  <div
-                    class="color-option color-gold selected"
-                    data-color="gold"
-                    title="Gold"></div>
-                  <div
-                    class="color-option color-silver"
-                    data-color="silver"
-                    title="Silver"></div>
-                </div>
-              </div>
-              <div class="quantity">
-                <button class="quantity-btn minus-btn">
-                  <img src="./assets/icon/minus.png" alt="" />
-                </button>
-
-                <p>0</p>
-                <button class="quantity-btn plus-btn">
-                  <img src="./assets/icon/plus.png" alt="" />
-                </button>
-              </div>
-            </div>
-            <div class="product-item">
-              <img src="./assets/images/products/Default.png" alt="product 1" />
-              <div class="product-content">
-                <h4 class="name">Boho Bracelet</h4>
-                <p class="price">$ 77</p>
-                <!-- Color Selection -->
-                <div class="color-selection">
-                  <div
-                    class="color-option color-gold selected"
-                    data-color="gold"
-                    title="Gold"></div>
-                  <div
-                    class="color-option color-silver"
-                    data-color="silver"
-                    title="Silver"></div>
-                </div>
-              </div>
-              <div class="quantity">
-                <button class="quantity-btn minus-btn">
-                  <img src="./assets/icon/minus.png" alt="" />
-                </button>
-
-                <p>0</p>
-                <button class="quantity-btn plus-btn">
-                  <img src="./assets/icon/plus.png" alt="" />
-                </button>
-              </div>
-            </div>
-            <div class="product-item">
-              <img src="./assets/images/products/Default.png" alt="product 1" />
-              <div class="product-content">
-                <h4 class="name">Boho Bracelet</h4>
-                <p class="price">$ 77</p>
-                <!-- Color Selection -->
-                <div class="color-selection">
-                  <div
-                    class="color-option color-gold selected"
-                    data-color="gold"
-                    title="Gold"></div>
-                  <div
-                    class="color-option color-silver"
-                    data-color="silver"
-                    title="Silver"></div>
-                </div>
-              </div>
-              <div class="quantity">
-                <button class="quantity-btn minus-btn">
-                  <img src="./assets/icon/minus.png" alt="" />
-                </button>
-
-                <p>0</p>
-                <button class="quantity-btn plus-btn">
-                  <img src="./assets/icon/plus.png" alt="" />
-                </button>
-              </div>
-            </div>
-            <div class="product-item">
-              <img src="./assets/images/products/Default.png" alt="product 1" />
-              <div class="product-content">
-                <h4 class="name">Boho Bracelet</h4>
-                <p class="price">$ 77</p>
-                <!-- Color Selection -->
-                <div class="color-selection">
-                  <div
-                    class="color-option color-gold selected"
-                    data-color="gold"
-                    title="Gold"></div>
-                  <div
-                    class="color-option color-silver"
-                    data-color="silver"
-                    title="Silver"></div>
-                </div>
-              </div>
-              <div class="quantity">
-                <button class="quantity-btn minus-btn">
-                  <img src="./assets/icon/minus.png" alt="" />
-                </button>
-
-                <p>0</p>
-                <button class="quantity-btn plus-btn">
-                  <img src="./assets/icon/plus.png" alt="" />
-                </button>
-              </div>
-            </div>
-            <div class="product-item">
-              <img src="./assets/images/products/Default.png" alt="product 1" />
-              <div class="product-content">
-                <h4 class="name">Boho Bracelet</h4>
-                <p class="price">$ 77</p>
-                <!-- Color Selection -->
-                <div class="color-selection">
-                  <div
-                    class="color-option color-gold selected"
-                    data-color="gold"
-                    title="Gold"></div>
-                  <div
-                    class="color-option color-silver"
-                    data-color="silver"
-                    title="Silver"></div>
-                </div>
-              </div>
-              <div class="quantity">
-                <button class="quantity-btn minus-btn">
-                  <img src="./assets/icon/minus.png" alt="" />
-                </button>
-
-                <p>0</p>
-                <button class="quantity-btn plus-btn">
-                  <img src="./assets/icon/plus.png" alt="" />
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <!-- footer -->
-
-    <footer class="footer">
+    <!-- Product Details Top -->
+    <div class="product-details-top">
       <div class="container">
-        <div class="footer-inner">
-          <ul>
-            <li class="list-head">Links</li>
-            <li><a href="#">Contact Us</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">FAQs</a></li>
-            <li><a href="#">Terms and Conditions</a></li>
-          </ul>
+        <div class="title">Bracelets</div>
+        <div class="sorting">
+          <div class="sorting-img">
+            <img src="./assets/icon/sorting-icon.png" alt="" />
+          </div>
+          <div class="sorting-drop-down">
+            <a href="#" onclick="sortProducts('featured')">Featured</a>
+              <a href="#" onclick="sortProducts('newest')">Newest</a>
+              <a href="#" onclick="sortProducts('price-low')">Price, low to high</a>
+              <a href="#" onclick="sortProducts('price-high')">Price, high to low</a>
+          </div>
         </div>
+        <div class="filter-icon" id="filter-icon"><img src="./assets/icon/filter.png" alt=""></div>
       </div>
-    </footer>
+    </div>
 
-    <script>
-      // Price slider functionality
-      const priceSlider = document.getElementById("price-slider");
-      const priceDisplay = document.getElementById("price-display");
-      const minPriceInput = document.getElementById("min-price");
-      const maxPriceInput = document.getElementById("max-price");
+  <!-- Main Section -->
+    <section class="main-area">
+      <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+          <!-- Price Filter -->
+          <div class="price-filter">
+            <div class="price-display" id="price-display">$100</div>
 
-      priceSlider.addEventListener("input", function () {
-        const value = this.value;
-        priceDisplay.textContent = `$${value}`;
-      });
+            <div class="price-range">
+              <div class="range-track" id="range-track"></div>
+              <input
+                type="range"
+                id="price-slider"
+                class="price-slider"
+                min="0"
+                max="100"
+                value="50"
+                step="1" />
+            </div>
 
-      minPriceInput.addEventListener("input", function () {
-        const minValue = parseInt(this.value) || 0;
-        const maxValue = parseInt(maxPriceInput.value) || 100;
+            <div class="price-inputs">
+              <input
+                type="number"
+                id="min-price"
+                class="price-input"
+                placeholder="$ 0"
+                value = "0"
+                readonly />
+              <img src="./assets/icon/Rectangle.png" alt="" />
+              <input
+                type="number"
+                id="max-price"
+                class="price-input"
+                placeholder="$ 100"
+                min="0"
+                max="100"
+                value="100" />
+            </div>
+          </div>
 
-        if (minValue <= maxValue) {
-          priceSlider.min = minValue;
-          filterProducts();
-        }
-      });
+          <!-- price filter -->
+          <div class="filter-section">
+            <div class="filter-title" onclick="toggleFilter('price')">
+              Price
+              <span class="arrow"
+                ><img src="./assets/icon/arrow-bottom.png" alt=""
+              /></span>
+            </div>
+            <div class="filter-content" id="price-filter">
+              <div class="price-range-filter">
+                <div class="price-range-options">
+                    <ul>
+                        <li class="price-range-option" data-range="all"
+                            onclick="selectPriceRange('all')">
+                            <span class="price-range-label">All (<span id="count-all">0</span>)</span>
+                        </li>
+                        <li class="price-range-option" data-range="0-50"
+                            onclick="selectPriceRange('0-50')">
+                            <span class="price-range-label">$0 - $50 (<span
+                                    id="count-0-50">0</span>)</span>
+                        </li>
+                        <li class="price-range-option" data-range="50-100"
+                            onclick="selectPriceRange('50-100')">
+                            <span class="price-range-label">$50 - $100 (<span
+                                    id="count-50-100">0</span>)</span>
+                        </li>
+                    </ul>
+                </div>
+              </div>
+            </div>
+          </div>
 
-      maxPriceInput.addEventListener("input", function () {
-        const maxValue = parseInt(this.value) || 100;
-        const minValue = parseInt(minPriceInput.value) || 0;
+          <!-- Color Filter -->
+          <div class="filter-section">
+            <div class="filter-title" onclick="toggleFilter('color')">
+              Colour
+              <span class="arrow"
+                ><img src="./assets/icon/arrow-bottom.png" alt=""
+              /></span>
+            </div>
+            <div class="filter-content" id="color-filter">
+              <div class="color-filter">
+                <div class="color-options">
+                  <ul>
+                    <li class="color-option selected" data-color="gold"
+                        onclick="selectColor('gold')">
+                        <span class="color-label">gold</span>
+                    </li>
+                    <li class="color-option" data-color="silver" onclick="selectColor('silver')">
+                        <span class="color-label">silver</span>
+                    </li>
+                    <li class="color-option" data-color="rose-gold"
+                        onclick="selectColor('rose-gold')">
+                        <span class="color-label">rose gold</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-        if (maxValue >= minValue) {
-          priceSlider.max = maxValue;
-          filterProducts();
-        }
-      });
+      <!-- Product List-->
+      <div class="product-list" id="product-list">
 
-      // Filter toggle functionality
-      function toggleFilter(filterType) {
-        const title = document.querySelector(
-          `[onclick="toggleFilter('${filterType}')"]`
-        );
-        const content = document.getElementById(`${filterType}-filter`);
+      </div>
+  </section>
+</main>
 
-        title.classList.toggle("collapsed");
-        if (title.classList.contains("collapsed")) {
-          content.style.display = "none";
-        } else {
-          content.style.display = "block";
-        }
-      }
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <ul>
+        <li class="list-head">Links</li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">FAQs</a></li>
+        <li><a href="#">Terms and Conditions</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
 
-      // Product quantity functionality
-      document.addEventListener("click", function (e) {
-        if (e.target.closest(".minus-btn")) {
-          const quantityElement = e.target
-            .closest(".quantity")
-            .querySelector("p");
-          let quantity = parseInt(quantityElement.textContent);
-          if (quantity > 0) {
-            quantityElement.textContent = quantity - 1;
-          }
-        }
+<script src="script/common.js"></script>
+<script src="script/sidebar.js"></script>
+<script src="script/productList.js"></script>
+<script>
+   const products = [
+            {
+                id: 1,
+                name: "Boho Bracelet",
+                price: 77,
+                image: "./assets/images/products/Default.png",
+                colors: ["gold", "silver"],
+                selectedColor: "gold",
+                quantity: 0,
+                category: "bracelet"
+            },
+            {
+                id: 2,
+                name: "Original Bracelet",
+                price: 67,
+                image: "./assets/images/products/Original Bracelet.png",
+                colors: ["gold", "silver"],
+                selectedColor: "gold",
+                quantity: 0,
+                category: "bracelet"
+            },
+            {
+                id: 3,
+                name: "Surf Bracelet",
+                price: 57,
+                image: "./assets/images/products/image 12.png",
+                colors: ["gold", "silver"],
+                selectedColor: "gold",
+                quantity: 0,
+                category: "bracelet"
+            },
+            {
+                id: 4,
+                name: "Gummy Bracelet",
+                price: 77,
+                image: "./assets/images/products/image 13.png",
+                colors: ["gold", "silver"],
+                selectedColor: "gold",
+                quantity: 0,
+                category: "bracelet"
+            },
+            {
+                id: 5,
+                name: "Love Bracelet",
+                price: 67,
+                image: "./assets/images/products/Surf Bracelet.png",
+                colors: ["rose-gold", "silver"],
+                selectedColor: "rose-gold",
+                quantity: 0,
+                category: "bracelet"
+            },
+            {
+                id: 6,
+                name: "Palm Bracelet",
+                price: 57,
+                image: "./assets/images/products/image 11.png",
+                colors: ["rose-gold", "silver"],
+                selectedColor: "rose-gold",
+                quantity: 0,
+                category: "bracelet"
+            }
+        ];
 
-        if (e.target.closest(".plus-btn")) {
-          const quantityElement = e.target
-            .closest(".quantity")
-            .querySelector("p");
-          let quantity = parseInt(quantityElement.textContent);
-          quantityElement.textContent = quantity + 1;
-        }
-      });
+        let currentFilters = {
+            search: '',
+            color: '',
+            minPrice: 0,
+            maxPrice: 100,
+            sortBy: 'featured'
+        };
 
-      // Sorting toggle functionality
-      document.addEventListener("click", function (e) {
-        const sortingImg = document.querySelector(".sorting-img");
-        const dropdown = document.querySelector(".sorting-drop-down");
-
-        if (sortingImg.contains(e.target)) {
-          if (dropdown.style.display === "flex") {
-            dropdown.style.display = "none";
-          } else {
-            dropdown.style.display = "flex";
-          }
-        } else if (!dropdown.contains(e.target)) {
-          dropdown.style.display = "none";
-        }
-      });
-
-      // Filter products based on selected criteria
-      function filterProducts() {
-        const minPrice = parseInt(minPriceInput.value) || 0;
-        const maxPrice = parseInt(maxPriceInput.value) || 100;
-        const products = document.querySelectorAll(".product-item");
-
-        products.forEach((product) => {
-          const priceText = product.querySelector(".price").textContent;
-          const price = parseInt(priceText.replace("$", "").trim());
-
-          const priceMatch = price >= minPrice && price <= maxPrice;
+        document.addEventListener('DOMContentLoaded', function () {
+            initializePage();
         });
-      }
 
-      // Initialize filters
-      filterProducts();
+        function initializePage() {
+            renderProducts();
+            setupEventListeners();
+            initializePriceSlider();
+            hideAllFilters();
+            updatePriceRangeCounts();
+        }
+
+        function hideAllFilters() {
+            const filterContents = document.querySelectorAll('.filter-content');
+            filterContents.forEach(content => {
+                content.style.display = 'none';
+            });
+        }
+
+        function updatePriceRangeCounts() {
+            const countAll = products.length;
+            const count0To50 = products.filter(product => product.price >= 0 && product.price <= 50).length;
+            const count50To100 = products.filter(product => product.price > 50 && product.price <= 100).length;
+
+            document.getElementById('count-all').textContent = countAll;
+            document.getElementById('count-0-50').textContent = count0To50;
+            document.getElementById('count-50-100').textContent = count50To100;
+        }
+
+        function selectPriceRange(range) {
+            currentFilters.priceRange = range;
+            const priceRangeOptions = document.querySelectorAll('.price-range-option');
+            priceRangeOptions.forEach(option => {
+                option.classList.remove('selected');
+                if (option.dataset.range === range) {
+                    option.classList.add('selected');
+                }
+            });
+
+            renderProducts();
+        }
+
+
+        function setupEventListeners() {
+
+            const searchInputs = document.querySelectorAll('.search-input');
+            searchInputs.forEach(input => {
+                input.addEventListener('input', handleSearch);
+            });
+
+            const threeDots = document.querySelectorAll('.three-dot');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const closeIcon = document.getElementById('close-icon');
+
+            threeDots.forEach(dot => {
+                dot.addEventListener('click', () => {
+                    mobileMenu.classList.add('active');
+                });
+            });
+
+            closeIcon.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+            });
+
+            const largeSidebarOverlay = document.getElementById('large-sidebar-overlay');
+            const closeLargeSidebar = document.getElementById('close-large-sidebar');
+
+            document.getElementById('large-three-dot').addEventListener('click', () => {
+                largeSidebarOverlay.style.display = 'block';
+            });
+
+            closeLargeSidebar.addEventListener('click', () => {
+                largeSidebarOverlay.style.display = 'none';
+            });
+
+            largeSidebarOverlay.addEventListener('click', (e) => {
+                if (e.target === largeSidebarOverlay) {
+                    largeSidebarOverlay.style.display = 'none';
+                }
+            });
+
+            document.addEventListener('click', function (e) {
+                const sortingImg = document.querySelector('.sorting-img');
+                const dropdown = document.querySelector('.sorting-drop-down');
+
+                if (sortingImg && dropdown) {
+                    if (sortingImg.contains(e.target)) {
+                        e.stopPropagation();
+                        dropdown.style.display = dropdown.style.display === 'flex' ? 'none' : 'flex';
+                    } else if (!dropdown.contains(e.target)) {
+                        dropdown.style.display = 'none';
+                    }
+                }
+            });
+
+            document.getElementById('min-price').addEventListener('input', handlePriceInput);
+            document.getElementById('max-price').addEventListener('input', handlePriceInput);
+        }
+
+        function initializePriceSlider() {
+            const maxSlider = document.getElementById('max-slider');
+            const priceDisplay = document.getElementById('price-display');
+            const rangeTrack = document.getElementById('range-track');
+
+            function updatePriceDisplay() {
+                const maxValue = parseInt(maxSlider.value);
+                priceDisplay.textContent = `${maxValue}`;
+
+                const percent = (maxValue / 100) * 100;
+                rangeTrack.style.width = percent + '%';
+
+                currentFilters.minPrice = 0;
+                currentFilters.maxPrice = maxValue;
+                renderProducts();
+            }
+
+            maxSlider.addEventListener('input', updatePriceDisplay);
+            updatePriceDisplay();
+        }
+
+        function handleSearch(e) {
+            currentFilters.search = e.target.value.toLowerCase();
+            renderProducts();
+
+            const searchInputs = document.querySelectorAll('.search-input');
+            searchInputs.forEach(input => {
+                if (input !== e.target) {
+                    input.value = e.target.value;
+                }
+            });
+        }
+
+        function handlePriceInput(e) {
+            const maxPriceInput = document.getElementById('max-price');
+
+            let minPrice = parseInt(minPriceInput.value) || 0;
+            let maxPrice = parseInt(maxPriceInput.value) || 100;
+
+            if (e.target.id === 'max-price') {
+                let maxPrice = parseInt(maxPriceInput.value) || 100;
+
+                if (maxPrice < 0) maxPrice = 0;
+                if (maxPrice > 100) maxPrice = 100;
+
+                maxPriceInput.value = maxPrice;
+                document.getElementById('max-slider').value = maxPrice;
+
+                currentFilters.minPrice = 0;
+                currentFilters.maxPrice = maxPrice;
+
+                document.getElementById('price-display').textContent = `$${maxPrice}`;
+                const percent = (maxPrice / 100) * 100;
+                document.getElementById('range-track').style.width = percent + '%';
+
+                renderProducts();
+            }
+        }
+
+        function toggleFilter(filterType) {
+            const title = document.querySelector(`[onclick="toggleFilter('${filterType}')"]`);
+            const content = document.getElementById(`${filterType}-filter`);
+
+            if (title && content) {
+                title.classList.toggle('collapsed');
+                if (title.classList.contains('collapsed')) {
+                    content.style.display = 'block';
+                } else {
+                    content.style.display = 'none';
+                }
+            }
+        }
+
+        function selectColor(color) {
+            currentFilters.color = color;
+
+            const colorOptions = document.querySelectorAll('.color-option');
+            colorOptions.forEach(option => {
+                option.classList.remove('selected');
+                if (option.dataset.color === color) {
+                    option.classList.add('selected');
+                }
+            });
+
+            renderProducts();
+        }
+
+        function sortProducts(sortType) {
+            currentFilters.sortBy = sortType;
+            renderProducts();
+
+            document.querySelector('.sorting-drop-down').style.display = 'none';
+        }
+
+        function filterProducts() {
+            return products.filter(product => {
+                const matchesSearch = product.name.toLowerCase().includes(currentFilters.search);
+
+                const matchesColor = currentFilters.color === '' || product.colors.includes(currentFilters.color);
+
+                const matchesPrice = product.price >= currentFilters.minPrice && product.price <= currentFilters.maxPrice;
+
+                let matchesPriceRange = true;
+                if (currentFilters.priceRange === '0-50') {
+                    matchesPriceRange = product.price >= 0 && product.price <= 50;
+                } else if (currentFilters.priceRange === '50-100') {
+                    matchesPriceRange = product.price > 50 && product.price <= 100;
+                }
+
+                return matchesSearch && matchesColor && matchesPrice && matchesPriceRange;
+            });
+        }
+
+        function sortFilteredProducts(filteredProducts) {
+            const sorted = [...filteredProducts];
+
+            switch (currentFilters.sortBy) {
+                case 'newest':
+                    return sorted.reverse();
+                case 'price-low':
+                    return sorted.sort((a, b) => a.price - b.price);
+                case 'price-high':
+                    return sorted.sort((a, b) => b.price - a.price);
+                case 'featured':
+                default:
+                    return sorted;
+            }
+        }
+
+        function renderProducts() {
+            const productList = document.getElementById('product-list');
+            const filteredProducts = filterProducts();
+            const sortedProducts = sortFilteredProducts(filteredProducts);
+
+            if (sortedProducts.length === 0) {
+                productList.innerHTML = `
+                    <div class="no-products">
+                        <h3>No products found</h3>
+                        <p>Try adjusting your filters or search terms.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            productList.innerHTML = sortedProducts.map(product => `
+                <div class="product-item" onclick="goToProductDetails(${product.id})">
+                    <img src="${product.image}" alt="${product.name}">
+                    <div class="product-content">
+                        <h4 class="name">${product.name}</h4>
+                        <p class="price">$ ${product.price}</p>
+                        <div class="color-selection">
+                            ${product.colors.map(color => `
+                                <div class="color-option color-${color} ${color === product.selectedColor ? 'selected' : ''}" 
+                                     data-color="${color}" 
+                                     title="${color.replace('-', ' ')}"
+                                     onclick="event.stopPropagation(); changeProductColor(${product.id}, '${color}')"></div>
+                            `).join('')}
+                        </div>
+                    </div>
+                    <div class="quantity">
+                        <button class="quantity-btn minus-btn" onclick="event.stopPropagation(); changeQuantity(${product.id}, -1);">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24'%3E%3Cpath d='M19 13H5v-2h14v2z'/%3E%3C/svg%3E" alt="">
+                        </button>
+                        <p>${product.quantity}</p>
+                        <button class="quantity-btn plus-btn" onclick="event.stopPropagation(); changeQuantity(${product.id}, 1);">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24'%3E%3Cpath d='M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z'/%3E%3C/svg%3E" alt="">
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function goToProductDetails(productId) {
+            window.location.href = `productDetails.html?id=${productId}`;
+        }
+
+        function changeProductColor(productId, color) {
+            const product = products.find(p => p.id === productId);
+            if (product) {
+                product.selectedColor = color;
+
+                restoreProductQuantities();
+                renderProducts();
+            }
+        }
+
+        function changeQuantity(productId, change) {
+            const product = products.find(p => p.id === productId);
+            if (product) {
+                const newQuantity = Math.max(0, product.quantity + change);
+
+                if (change > 0) {
+                    addToCart(productId, product.selectedColor, change);
+                } else if (change < 0 && product.quantity > 0) {
+                    removeFromCart(productId, product.selectedColor, Math.abs(change));
+                }
+
+                product.quantity = newQuantity;
+                renderProducts();
+            }
+        }
+
+
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        function addToCart(productId, color, quantity = 1) {
+            const product = products.find(p => p.id === productId);
+            if (!product) return;
+
+            const existingItem = cart.find(item =>
+                item.productId === productId && item.color === color
+            );
+
+            if (existingItem) {
+                existingItem.quantity += quantity;
+            } else {
+                cart.push({
+                    productId: productId,
+                    name: product.name,
+                    price: product.price,
+                    image: product.image,
+                    color: color,
+                    quantity: quantity
+                });
+            }
+
+            saveCartToStorage();
+            updateCartDisplay();
+        }
+
+        function removeFromCart(productId, color, quantity = 1) {
+            const itemIndex = cart.findIndex(item =>
+                item.productId === productId && item.color === color
+            );
+
+            if (itemIndex !== -1) {
+                cart[itemIndex].quantity -= quantity;
+
+                if (cart[itemIndex].quantity <= 0) {
+                    cart.splice(itemIndex, 1);
+                }
+            }
+
+            saveCartToStorage();
+            updateCartDisplay();
+        }
+
+        function saveCartToStorage() {
+            localStorage.setItem('cart', JSON.stringify(cart));
+        }
+
+        function updateCartDisplay() {
+            const totalQuantity = cart.reduce((sum, item) => sum + item.quantity, 0);
+
+            const cartBadges = ['cart-badge', 'mobile-cart-badge', 'menu-cart-badge'];
+            cartBadges.forEach(badgeId => {
+                const badge = document.getElementById(badgeId);
+                if (badge) {
+                    badge.textContent = totalQuantity;
+                    if (totalQuantity === 0) {
+                        badge.classList.add('hidden');
+                    } else {
+                        badge.classList.remove('hidden');
+                    }
+                }
+            });
+        }
+
+        function loadCartFromStorage() {
+            cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+            restoreProductQuantities();
+            updateCartDisplay();
+        }
+
+        function restoreProductQuantities() {
+            products.forEach(product => {
+                product.quantity = 0;
+            });
+
+            cart.forEach(cartItem => {
+                const product = products.find(p => p.id === cartItem.productId);
+                if (product) {
+                    product.quantity += cartItem.quantity;
+                }
+            });
+        }
+        function loadCartCount() {
+            const savedCart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart = savedCart;
+            updateCartDisplay();
+        }
+
+        function initializePage() {
+            loadCartCount();
+            loadCartFromStorage();
+            renderProducts();
+            setupEventListeners();
+            initializePriceSlider();
+            hideAllFilters();
+            loadCartFromStorage();
+            updatePriceRangeCounts();
+        }
     </script>
-
-    <script src="script/menu.js"></script>
 </body>
+
 </html>
