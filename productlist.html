@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Get Balmy - products</title>
-    <link rel="stylesheet" href="./style/productList.css">
+    <link rel="stylesheet" href="./style/productlist.css">
     <link rel="stylesheet" href="./style/common.css">
     <link rel="stylesheet" href="./style/sidebar.css">
     <link rel="stylesheet" href="./style/header.css">
@@ -251,7 +251,6 @@
 
     <script src="script/common.js"></script>
     <script src="script/sidebar.js"></script>
-    <script src="script/productList.js"></script>
     <script>
         const products = [
             {
@@ -553,12 +552,12 @@
         }
 
         function renderProducts() {
-            const productList = document.getElementById('product-list');
+            const productlist = document.getElementById('product-list');
             const filteredProducts = filterProducts();
             const sortedProducts = sortFilteredProducts(filteredProducts);
 
             if (sortedProducts.length === 0) {
-                productList.innerHTML = `
+                productlist.innerHTML = `
                     <div class="no-products">
                         <h3>No products found</h3>
                         <p>Try adjusting your filters or search terms.</p>
@@ -567,7 +566,7 @@
                 return;
             }
 
-            productList.innerHTML = sortedProducts.map(product => `
+            productlist.innerHTML = sortedProducts.map(product => `
                 <div class="product-item" onclick="goToProductDetails(${product.id})">
                     <img src="${product.image}" alt="${product.name}">
                     <div class="product-content">
