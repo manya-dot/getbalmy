@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Get Balmy - Product Details</title>
+    <title>Get Balmy - product details</title>
     <link rel="stylesheet" href="./style/productDetails.css">
     <link rel="stylesheet" href="./style/common.css">
     <link rel="stylesheet" href="./style/sidebar.css">
     <link rel="stylesheet" href="./style/header.css">
 
-    <!-- Swiper -->
+    <!-- swiper -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css">
 </head>
 
 <body>
     <div class="menu-overlay" id="menu-overlay"></div>
     <header class="header">
-        <!-- Large Device -->
+        <!-- large device -->
         <div class="container">
             <div class="three-dot" id="large-three-dot">
                 <img src="./assets/images/menu.png" alt="">
@@ -26,9 +27,10 @@
             </div>
             <div class="cart" onclick="window.location.href='cart.html'">
                 <img src="./assets/images/basket icon.png" alt="">
+                <span class="cart-badge" id="cart-badge">0</span>
             </div>
         </div>
-        <!-- Mobile Navbar -->
+        <!-- mobile navbar -->
         <div class="mobile-navbar">
             <div class="left-side">
                 <div class="second-logo" onclick="window.location.href='index.html'">
@@ -39,6 +41,7 @@
             <div class="right-side">
                 <div class="cart" onclick="window.location.href='cart.html'">
                     <img src="./assets/images/basket icon.png" alt="">
+                    <span class="cart-badge" id="mobile-cart-badge">0</span>
                 </div>
                 <div class="three-dot" id="three-dot">
                     <img src="./assets/images/menu.png" alt="">
@@ -46,10 +49,8 @@
             </div>
         </div>
     </header>
-
-    <!-- Mobile Menu -->
+    <!-- mobile menu -->
     <div class="mobile-menu">
-        <!-- Header with Logo and Icons -->
         <div class="menu-header">
             <div class="logo" onclick="window.location.href='index.html'">
                 <img src="./assets/images/second-logo.png" alt="">
@@ -57,6 +58,7 @@
             <div class="menu-icons">
                 <div class="cart-icon" onclick="window.location.href='cart.html'">
                     <img src="./assets/images/basket icon.png" alt="">
+                    <span class="cart-badge" id="menu-cart-badge">0</span>
                 </div>
                 <div class="close-icon" id="close-icon">
                     <img src="./assets/icon/cross.png" alt="">
@@ -80,7 +82,8 @@
             <a href="#" class="nav-item">Shop Accessories</a>
         </nav>
     </div>
-<!-- Large Device large-sidebar -->
+
+    <!-- Large Device large-sidebar -->
     <div class="large-sidebar-overlay" id="large-sidebar-overlay">
         <div class="large-sidebar" id="large-sidebar">
             <div class="large-sidebar-header">
@@ -114,9 +117,9 @@
         </div>
     </div>
 
-    <!-- Main Section -->
+    <!-- main area -->
     <main>
-        <!-- Breadcumb -->
+        <!-- breadcumb -->
         <div class="breadcrumb">
             <div class="container">
                 <div class="breadcrumb-content" onclick="window.location.href='productList.html'">
@@ -127,8 +130,7 @@
                 </div>
             </div>
         </div>
-
-        <!-- Product Content -->
+        <!-- product content -->
         <div class="product-container">
             <div class="container">
                 <div class="product-images">
@@ -198,21 +200,7 @@
         </div>
     </main>
 
-    <!-- Footer -->
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-inner">
-                <ul>
-                    <li class="list-head">Links</li>
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">FAQs</a></li>
-                    <li><a href="#">Terms and Conditions</a></li>
-                </ul>
-            </div>
-        </div>
-    </footer>
+    <!-- footer -->
 
     <footer class="footer">
         <div class="container">
@@ -244,26 +232,26 @@
                 quantity: 0,
                 category: "bracelet",
                 images: [
-                    './assets/images/product-detais/image 18.png',
-                    './assets/images/product-detais/image 14.png',
-                    './assets/images/product-detais/image 16.png',
-                    './assets/images/product-detais/image 17.png'
+                    './assets/images/product-details/image 18.png',
+                    './assets/images/product-details/image 14.png',
+                    './assets/images/product-details/image 16.png',
+                    './assets/images/product-details/image 17.png'
                 ]
             },
             {
                 id: 2,
                 name: "Original Bracelet",
                 price: 67,
-                image: "./assets/images/product-detais/image 19.png",
+                image: "./assets/images/product-details/image 19.png",
                 colors: ["gold", "silver"],
                 selectedColor: "gold",
                 quantity: 0,
                 category: "bracelet",
                 images: [
-                    './assets/images/product-detais/image 19.png',
-                    './assets/images/product-detais/image 24.png',
-                    './assets/images/product-detais/image 26.png',
-                    './assets/images/product-detais/image 28.png'
+                    './assets/images/product-details/image 19.png',
+                    './assets/images/product-details/image 24.png',
+                    './assets/images/product-details/image 26.png',
+                    './assets/images/product-details/image 28.png'
                 ]
             },
             {
@@ -276,26 +264,26 @@
                 quantity: 0,
                 category: "bracelet",
                 images: [
-                    './assets/images/product-detais/image 18.png',
-                    './assets/images/product-detais/image 14.png',
-                    './assets/images/product-detais/image 16.png',
-                    './assets/images/product-detais/image 17.png'
+                    './assets/images/product-details/image 18.png',
+                    './assets/images/product-details/image 14.png',
+                    './assets/images/product-details/image 16.png',
+                    './assets/images/product-details/image 17.png'
                 ]
             },
             {
                 id: 4,
                 name: "Gummy Bracelet",
                 price: 77,
-                image: "./assets/images/product-detais/image 19.png",
+                image: "./assets/images/product-details/image 19.png",
                 colors: ["gold", "silver"],
                 selectedColor: "gold",
                 quantity: 0,
                 category: "bracelet",
                 images: [
-                    './assets/images/product-detais/image 19.png',
-                    './assets/images/product-detais/image 24.png',
-                    './assets/images/product-detais/image 26.png',
-                    './assets/images/product-detais/image 28.png'
+                    './assets/images/product-details/image 19.png',
+                    './assets/images/product-details/image 24.png',
+                    './assets/images/product-details/image 26.png',
+                    './assets/images/product-details/image 28.png'
                 ]
             },
             {
@@ -308,10 +296,10 @@
                 quantity: 0,
                 category: "bracelet",
                 images: [
-                    './assets/images/product-detais/image 18.png',
-                    './assets/images/product-detais/image 14.png',
-                    './assets/images/product-detais/image 16.png',
-                    './assets/images/product-detais/image 17.png'
+                    './assets/images/product-details/image 18.png',
+                    './assets/images/product-details/image 14.png',
+                    './assets/images/product-details/image 16.png',
+                    './assets/images/product-details/image 17.png'
                 ]
             },
             {
@@ -324,10 +312,10 @@
                 quantity: 0,
                 category: "bracelet",
                 images: [
-                    './assets/images/product-detais/image 19.png',
-                    './assets/images/product-detais/image 24.png',
-                    './assets/images/product-detais/image 26.png',
-                    './assets/images/product-detais/image 28.png'
+                    './assets/images/product-details/image 19.png',
+                    './assets/images/product-details/image 24.png',
+                    './assets/images/product-details/image 26.png',
+                    './assets/images/product-details/image 28.png'
                 ]
             }
         ];
@@ -692,6 +680,6 @@
 
 
     </script>
-    
 </body>
+
 </html>
