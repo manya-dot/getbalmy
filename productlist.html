@@ -1,283 +1,259 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Get Balmy - Products</title>
-    <link rel="stylesheet" href="./style/productList.css" />
+    <title>Get Balmy - products</title>
+    <link rel="stylesheet" href="./style/productList.css">
     <link rel="stylesheet" href="./style/common.css">
     <link rel="stylesheet" href="./style/sidebar.css">
     <link rel="stylesheet" href="./style/header.css">
 </head>
 
 <body>
-  <div class="menu-overlay" id="menu-overlay"></div>
-  <header class="header">
-      <!-- large device -->
-      <div class="container">
-          <div class="three-dot" id="large-three-dot">
-              <img src="./assets/images/menu.png" alt="">
-          </div>
-          <div class="second-logo" onclick="window.location.href='index.html'">
-              <img src="./assets/images/second-logo.png" alt="">
-          </div>
-          <div class="cart" onclick="window.location.href='cart.html'">
-              <img src="./assets/images/basket icon.png" alt="">
-              <span class="cart-badge" id="cart-badge">0</span>
-          </div>
-      </div>
-
-    <!-- Mobile Navbar -->
-    <div class="mobile-navbar">
-      <div class="left-side">
-        <div class="second-logo">
-          <div class="second-logo" onclick="window.location.href='index.html'">
-                  <img src="./assets/images/second-logo.png" alt="">
+    <div class="menu-overlay" id="menu-overlay"></div>
+    <header class="header">
+        <!-- large device -->
+        <div class="container">
+            <div class="three-dot" id="large-three-dot">
+                <img src="./assets/images/menu.png" alt="">
             </div>
-      </div>
-
-      <div class="right-side">
-        <div class="cart" onclick="window.location.href='cart.html'">
-          <img src="./assets/images/basket icon.png" alt="" />
-        </div>
-        <div class="three-dot" id="three-dot">
-          <img src="./assets/images/menu.png" alt="" />
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <!-- Mobile Menu -->
-  <div class="mobile-menu">
-    <div class="menu-header">
-      <div class="logo" onclick="window.location.href='index.html'">
-        <img src="./assets/images/second-logo.png" alt="" />
-      </div>
-      <div class="menu-icons" onclick="window.location.href='cart.html'">
-        <div class="cart-icon">
-          <img src="./assets/images/basket icon.png" alt="" />
-        </div>
-        <div class="close-icon" id="close-icon">
-          <img src="./assets/icon/cross.png" alt="" />
-        </div>
-      </div>
-    </div>
-
-    <!-- Search Section -->
-    <div class="search-section">
-      <div class="search-container">
-        <div class="search-icon">
-          <img src="./assets/icon/search.png" alt="" />
-        </div>
-        <input
-          type="text"
-          class="search-input"
-          placeholder="Search for bracelets" />
-      </div>
-    </div>
-
-    <!-- Navigation Menu -->
-    <nav class="menu-navigation">
-      <a href="#" class="nav-item">Shop Rings</a>
-      <a href="#" class="nav-item">Shop Bracelets</a>
-      <a href="#" class="nav-item">Shop Necklaces</a>
-      <a href="#" class="nav-item">Shop Accessories</a>
-    </nav>
-  </div>
-  <!-- Large Device large-sidebar -->
-  <div class="large-sidebar-overlay" id="large-sidebar-overlay">
-    <div class="large-sidebar" id="large-sidebar">
-      <div class="large-sidebar-header">
-        <div class="close-large-sidebar" id="close-large-sidebar">
-            <img src="./assets/icon/cross.png" alt="close">
-        </div>
-      </div>
-
-      <div class="search-section">
-        <div class="search-container">
-            <div class="search-icon">
-                <img src="./assets/icon/search.png" alt="">
+            <div class="second-logo" onclick="window.location.href='index.html'">
+                <img src="./assets/images/second-logo.png" alt="">
             </div>
-            <input type="text" class="search-input" placeholder="Search for bracelets">
-        </div>
-      </div>
-
-      <div class="large-sidebar-menu">
-          <a href="#" class="large-sidebar-item">Shop Rings</a>
-          <a href="#" class="large-sidebar-item">Shop Bracelets</a>
-          <a href="#" class="large-sidebar-item">Shop Necklaces</a>
-          <a href="#" class="large-sidebar-item">Shop Accessories</a>
-      </div>
-
-      <div class="large-sidebar-footer">
-        <div class="social-icons">
-          <img src="./assets/icon/instagram.png" alt="Instagram">
-          <img src="./assets/icon/message.png" alt="Email">
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <main>
-      <!-- Breadcumb -->
-    <div class="breadcrumb">
-      <div class="container">
-        <div class="breadcrumb-content">
-          <a href="#">Products/</a>
-          <a href="#">Bracelets</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Product Details Top -->
-    <div class="product-details-top">
-      <div class="container">
-        <div class="title">Bracelets</div>
-        <div class="sorting">
-          <div class="sorting-img">
-            <img src="./assets/icon/sorting-icon.png" alt="" />
-          </div>
-          <div class="sorting-drop-down">
-            <a href="#" onclick="sortProducts('featured')">Featured</a>
-              <a href="#" onclick="sortProducts('newest')">Newest</a>
-              <a href="#" onclick="sortProducts('price-low')">Price, low to high</a>
-              <a href="#" onclick="sortProducts('price-high')">Price, high to low</a>
-          </div>
-        </div>
-        <div class="filter-icon" id="filter-icon"><img src="./assets/icon/filter.png" alt=""></div>
-      </div>
-    </div>
-
-  <!-- Main Section -->
-    <section class="main-area">
-      <div class="container">
-        <!-- Sidebar -->
-        <div class="sidebar">
-          <!-- Price Filter -->
-          <div class="price-filter">
-            <div class="price-display" id="price-display">$100</div>
-
-            <div class="price-range">
-              <div class="range-track" id="range-track"></div>
-              <input
-                type="range"
-                id="price-slider"
-                class="price-slider"
-                min="0"
-                max="100"
-                value="50"
-                step="1" />
+            <div class="cart" onclick="window.location.href='cart.html'">
+                <img src="./assets/images/basket icon.png" alt="">
+                <span class="cart-badge" id="cart-badge">0</span>
             </div>
-
-            <div class="price-inputs">
-              <input
-                type="number"
-                id="min-price"
-                class="price-input"
-                placeholder="$ 0"
-                value = "0"
-                readonly />
-              <img src="./assets/icon/Rectangle.png" alt="" />
-              <input
-                type="number"
-                id="max-price"
-                class="price-input"
-                placeholder="$ 100"
-                min="0"
-                max="100"
-                value="100" />
-            </div>
-          </div>
-
-          <!-- price filter -->
-          <div class="filter-section">
-            <div class="filter-title" onclick="toggleFilter('price')">
-              Price
-              <span class="arrow"
-                ><img src="./assets/icon/arrow-bottom.png" alt=""
-              /></span>
-            </div>
-            <div class="filter-content" id="price-filter">
-              <div class="price-range-filter">
-                <div class="price-range-options">
-                    <ul>
-                        <li class="price-range-option" data-range="all"
-                            onclick="selectPriceRange('all')">
-                            <span class="price-range-label">All (<span id="count-all">0</span>)</span>
-                        </li>
-                        <li class="price-range-option" data-range="0-50"
-                            onclick="selectPriceRange('0-50')">
-                            <span class="price-range-label">$0 - $50 (<span
-                                    id="count-0-50">0</span>)</span>
-                        </li>
-                        <li class="price-range-option" data-range="50-100"
-                            onclick="selectPriceRange('50-100')">
-                            <span class="price-range-label">$50 - $100 (<span
-                                    id="count-50-100">0</span>)</span>
-                        </li>
-                    </ul>
+        </div>
+        <!-- mobile navbar -->
+        <div class="mobile-navbar">
+            <div class="left-side">
+                <div class="second-logo" onclick="window.location.href='index.html'">
+                    <img src="./assets/images/second-logo.png" alt="">
                 </div>
-              </div>
             </div>
-          </div>
 
-          <!-- Color Filter -->
-          <div class="filter-section">
-            <div class="filter-title" onclick="toggleFilter('color')">
-              Colour
-              <span class="arrow"
-                ><img src="./assets/icon/arrow-bottom.png" alt=""
-              /></span>
-            </div>
-            <div class="filter-content" id="color-filter">
-              <div class="color-filter">
-                <div class="color-options">
-                  <ul>
-                    <li class="color-option selected" data-color="gold"
-                        onclick="selectColor('gold')">
-                        <span class="color-label">gold</span>
-                    </li>
-                    <li class="color-option" data-color="silver" onclick="selectColor('silver')">
-                        <span class="color-label">silver</span>
-                    </li>
-                    <li class="color-option" data-color="rose-gold"
-                        onclick="selectColor('rose-gold')">
-                        <span class="color-label">rose gold</span>
-                    </li>
-                  </ul>
+            <div class="right-side">
+                <div class="cart" onclick="window.location.href='cart.html'">
+                    <img src="./assets/images/basket icon.png" alt="">
+                    <span class="cart-badge" id="mobile-cart-badge">0</span>
                 </div>
-              </div>
+                <div class="three-dot" id="three-dot">
+                    <img src="./assets/images/menu.png" alt="">
+                </div>
             </div>
-          </div>
+        </div>
+    </header>
+    <!-- mobile menu -->
+    <div class="mobile-menu">
+        <div class="menu-header">
+            <div class="logo" onclick="window.location.href='index.html'">
+                <img src="./assets/images/second-logo.png" alt="">
+            </div>
+            <div class="menu-icons">
+                <div class="cart-icon" onclick="window.location.href='cart.html'">
+                    <img src="./assets/images/basket icon.png" alt="">
+                    <span class="cart-badge" id="menu-cart-badge">0</span>
+                </div>
+                <div class="close-icon" id="close-icon">
+                    <img src="./assets/icon/cross.png" alt="">
+                </div>
+            </div>
         </div>
 
-      <!-- Product List-->
-      <div class="product-list" id="product-list">
+        <!-- Search Section -->
+        <div class="search-section">
+            <div class="search-container">
+                <div class="search-icon"> <img src="./assets/icon/search.png" alt=""></div>
+                <input type="text" class="search-input" placeholder="Search for bracelets">
+            </div>
+        </div>
 
-      </div>
-  </section>
-</main>
-
-<!-- Footer -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer-inner">
-      <ul>
-        <li class="list-head">Links</li>
-        <li><a href="#">Contact Us</a></li>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">FAQs</a></li>
-        <li><a href="#">Terms and Conditions</a></li>
-      </ul>
+        <!-- Navigation Menu -->
+        <nav class="menu-navigation">
+            <a href="#" class="nav-item">Shop Rings</a>
+            <a href="#" class="nav-item">Shop Bracelets</a>
+            <a href="#" class="nav-item">Shop Necklaces</a>
+            <a href="#" class="nav-item">Shop Accessories</a>
+        </nav>
     </div>
-  </div>
-</footer>
+    <!-- Large Device large-sidebar -->
+    <div class="large-sidebar-overlay" id="large-sidebar-overlay">
+        <div class="large-sidebar" id="large-sidebar">
+            <div class="large-sidebar-header">
+                <div class="close-large-sidebar" id="close-large-sidebar">
+                    <img src="./assets/icon/cross.png" alt="close">
+                </div>
+            </div>
 
-<script src="script/common.js"></script>
-<script src="script/sidebar.js"></script>
-<script src="script/productList.js"></script>
-<script>
-   const products = [
+            <div class="search-section">
+                <div class="search-container">
+                    <div class="search-icon">
+                        <img src="./assets/icon/search.png" alt="">
+                    </div>
+                    <input type="text" class="search-input" placeholder="Search for bracelets">
+                </div>
+            </div>
+
+            <div class="large-sidebar-menu">
+                <a href="#" class="large-sidebar-item">Shop Rings</a>
+                <a href="#" class="large-sidebar-item">Shop Bracelets</a>
+                <a href="#" class="large-sidebar-item">Shop Necklaces</a>
+                <a href="#" class="large-sidebar-item">Shop Accessories</a>
+            </div>
+
+            <div class="large-sidebar-footer">
+                <div class="social-icons">
+                    <img src="./assets/icon/instagram.png" alt="Instagram">
+                    <img src="./assets/icon/message.png" alt="Email">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <!-- breadcumb -->
+        <div class="breadcrumb">
+            <div class="container">
+                <div class="breadcrumb-content">
+                    <a href="#">Products/</a>
+                    <a href="#">Bracelets</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- product details top -->
+        <div class="product-details-top">
+            <div class="container">
+                <div class="title">Bracelets</div>
+                <div class="sorting">
+                    <div class="sorting-img">
+                        <img src="./assets/icon/sorting-icon.png" alt="">
+                    </div>
+                    <div class="sorting-drop-down">
+                        <a href="#" onclick="sortProducts('featured')">Featured</a>
+                        <a href="#" onclick="sortProducts('newest')">Newest</a>
+                        <a href="#" onclick="sortProducts('price-low')">Price, low to high</a>
+                        <a href="#" onclick="sortProducts('price-high')">Price, high to low</a>
+                    </div>
+                </div>
+                <div class="filter-icon" id="filter-icon"><img src="./assets/icon/filter.png" alt=""></div>
+            </div>
+        </div>
+
+        <!-- main area -->
+        <section class="main-area">
+            <div class="container">
+                <!-- sidebar -->
+                <div class="sidebar" id="sidebar">
+                    <!-- Price Filter -->
+                    <div class="price-filter">
+                        <div class="price-display" id="price-display">$100</div>
+
+                        <div class="price-range">
+                            <div class="range-track" id="range-track"></div>
+                            <input type="range" id="max-slider" min="0" max="100" value="100" step="1">
+                        </div>
+
+
+
+                        <div class="price-inputs">
+                            <input type="number" id="min-price" class="price-input" placeholder="$ 0" value="0"
+                                readonly>
+                            <img src="./assets/icon/Rectangle.png" alt="">
+                            <input type="number" id="max-price" class="price-input" placeholder="$ 100" min="0"
+                                max="100" value="100">
+                        </div>
+                    </div>
+
+                    <!-- price filter -->
+                    <div class="filter-section">
+                        <div class="filter-title" onclick="toggleFilter('price')">
+                            Price
+                            <span class="arrow"><img src="./assets/icon/arrow-bottom.png" alt=""></span>
+                        </div>
+                        <div class="filter-content" id="price-filter">
+                            <div class="price-range-filter">
+                                <div class="price-range-options">
+                                    <ul>
+                                        <li class="price-range-option" data-range="all"
+                                            onclick="selectPriceRange('all')">
+                                            <span class="price-range-label">All (<span id="count-all">0</span>)</span>
+                                        </li>
+                                        <li class="price-range-option" data-range="0-50"
+                                            onclick="selectPriceRange('0-50')">
+                                            <span class="price-range-label">$0 - $50 (<span
+                                                    id="count-0-50">0</span>)</span>
+                                        </li>
+                                        <li class="price-range-option" data-range="50-100"
+                                            onclick="selectPriceRange('50-100')">
+                                            <span class="price-range-label">$50 - $100 (<span
+                                                    id="count-50-100">0</span>)</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Color Filter -->
+                    <div class="filter-section">
+                        <div class="filter-title" onclick="toggleFilter('color')">
+                            Color
+                            <span class="arrow"><img src="./assets/icon/arrow-bottom.png" alt=""></span>
+
+                        </div>
+                        <div class="filter-content" id="color-filter">
+                            <div class="color-filter">
+                                <div class="color-options">
+                                    <ul>
+                                        <li class="color-option selected" data-color="gold"
+                                            onclick="selectColor('gold')">
+                                            <span class="color-label">gold</span>
+                                        </li>
+                                        <li class="color-option" data-color="silver" onclick="selectColor('silver')">
+                                            <span class="color-label">silver</span>
+                                        </li>
+                                        <li class="color-option" data-color="rose-gold"
+                                            onclick="selectColor('rose-gold')">
+                                            <span class="color-label">rose gold</span>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product List -->
+                <div class="product-list" id="product-list">
+
+                </div>
+        </section>
+    </main>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <ul>
+                    <li class="list-head">Links</li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Terms and Conditions</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script/common.js"></script>
+    <script src="script/sidebar.js"></script>
+    <script src="script/productList.js"></script>
+    <script>
+        const products = [
             {
                 id: 1,
                 name: "Boho Bracelet",

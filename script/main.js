@@ -1,27 +1,44 @@
-var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 3.8,
+var swiper = new Swiper(".mySwiper1", {
+    slidesPerView: 1,
     spaceBetween: 20,
     grabCursor: true,
     freeMode: true,
     breakpoints: {
-        // Small screens (up to 768px) - 1 slide
-        320: {
+        //swiper adjustments based on screen size
+        310: {
+            slidesPerView: .75,
+            spaceBetween: 20
+        },
+        350: {
+            slidesPerView: .9,
+            spaceBetween: 20
+        },
+        400: {
             slidesPerView: 1,
             spaceBetween: 20
         },
-        // Medium screens (769px to 991px) - 2 slides
-        769: {
+        500: {
+            slidesPerView: 1.3,
+            spaceBetween: 20
+        },
+        576: {
+            slidesPerView: 1.3,
+            spaceBetween: 20
+        },
+        600: {
+            slidesPerView: 1.5,
+            spaceBetween: 20
+        },
+        768: {
             slidesPerView: 2,
             spaceBetween: 25
         },
-        // Large screens (992px and above) - 3.8 slides
         992: {
-            slidesPerView: 3,
+            slidesPerView: 2.5,
             spaceBetween: 30
         },
-        // Large screens (992px and above) - 3.8 slides
         1024: {
-            slidesPerView: 3.8,
+            slidesPerView: 2.7,
             spaceBetween: 30
         }
     }
