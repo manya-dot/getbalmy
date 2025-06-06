@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Get Balmy - Cart</title>
-    <!-- css -->
+    <!-- CSS -->
     <link rel="stylesheet" href="./style/header.css">
     <link rel="stylesheet" href="./style/common.css">
     <link rel="stylesheet" href="./style/sidebar.css">
@@ -13,7 +13,7 @@
 
 <body>
     <header class="header">
-        <!-- large device -->
+        <!-- Large Device -->
         <div class="container">
             <div class="three-dot" id="large-three-dot">
                 <img src="./assets/images/menu.png" alt="">
@@ -26,7 +26,8 @@
                 <span class="cart-badge" id="cart-badge">0</span>
             </div>
         </div>
-        <!-- mobile navbar -->
+
+        <!-- Mobile Navbar -->
         <div class="mobile-navbar">
             <div class="left-side">
                 <div class="second-logo" onclick="window.location.href='index.html'">
@@ -45,7 +46,8 @@
             </div>
         </div>
     </header>
-    <!-- mobile menu -->
+
+    <!-- Mobile Menu -->
     <div class="mobile-menu">
         <!-- Header with Logo and Icons -->
         <div class="menu-header">
@@ -79,6 +81,7 @@
             <a href="#" class="nav-item">Shop Accessories</a>
         </nav>
     </div>
+
     <!-- Large Device large-sidebar -->
     <div class="large-sidebar-overlay" id="large-sidebar-overlay">
         <div class="large-sidebar" id="large-sidebar">
@@ -113,6 +116,258 @@
         </div>
     </div>
     
-    
+   <!-- Main Section -->
+    <main class="main-area">
+        <!-- Product Details Top -->
+        <div class="product-details-top">
+            <div class="container">
+                <div class="title">Your Basket</div>
+            </div>
+        </div>
+
+        <!-- Cart Content -->
+        <section class="cart-section">
+            <div class="container">
+                <div class="cart-wrapper">
+                    <!-- Left side - Cart items -->
+                    <div class="cart-items" id="cart-items">
+                        <div class="loading">Loading cart...</div>
+                    </div>
+
+                    <!-- Right side - Cart summary -->
+                    <div class="cart-summary">
+                        <div class="summary-content">
+                            <h3 class="summary-title large-total">
+                                <span>Total</span>
+                                <span class="total-price" id="total-price">$0</span>
+                            </h3>
+                            <div class="price-row">
+                                <span>Subtotal</span>
+                                <span class="price" id="subtotal-price">$ 0</span>
+                            </div>
+                            <div class="price-row">
+                                <span>Delivery</span>
+                                <span class="price">TBC</span>
+                            </div>
+                            <h3 class="summary-title small-total">
+                                <span>Total</span>
+                                <span class="total-price" id="total-price-bottom">$0</span>
+                            </h3>
+                        </div>
+                        <button onclick="window.location.href='payment.html'" class="checkout-btn">Checkout</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <ul>
+                    <li class="list-head">Links</li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Terms and Conditions</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script/common.js"></script>
+    <script src="script/sidebar.js"></script>
+
+    <script>
+        const products = [
+            {
+                id: 1,
+                name: "Boho Bracelet",
+                price: 77,
+                image: "./assets/images/products/Default.png",
+                colors: ["gold", "silver"],
+                selectedColor: "gold",
+                quantity: 0,
+                category: "bracelet"
+            },
+            {
+                id: 2,
+                name: "Original Bracelet",
+                price: 67,
+                image: "./assets/images/product-detais/image 19.png",
+                colors: ["gold", "silver"],
+                selectedColor: "gold",
+                quantity: 0,
+                category: "bracelet"
+            },
+            {
+                id: 3,
+                name: "Surf Bracelet",
+                price: 57,
+                image: "./assets/images/products/image 12.png",
+                colors: ["gold", "silver"],
+                selectedColor: "gold",
+                quantity: 0,
+                category: "bracelet"
+            },
+            {
+                id: 4,
+                name: "Gummy Bracelet",
+                price: 77,
+                image: "./assets/images/product-detais/image 19.png",
+                colors: ["gold", "silver"],
+                selectedColor: "gold",
+                quantity: 0,
+                category: "bracelet"
+            },
+            {
+                id: 5,
+                name: "Love Bracelet",
+                price: 67,
+                image: "./assets/images/products/Surf Bracelet.png",
+                colors: ["rose-gold", "silver"],
+                selectedColor: "rose-gold",
+                quantity: 0,
+                category: "bracelet"
+            },
+            {
+                id: 6,
+                name: "Palm Bracelet",
+                price: 57,
+                image: "./assets/images/product-detais/image 19.png",
+                colors: ["rose-gold", "silver"],
+                selectedColor: "rose-gold",
+                quantity: 0,
+                category: "bracelet"
+            }
+        ];
+
+        let cart = [];
+
+        function loadCart() {
+            cart = JSON.parse(localStorage.getItem('cart')) || [];
+            renderCart();
+            updateCartSummary();
+            updateCartDisplay();
+        }
+
+        function saveCart() {
+            localStorage.setItem('cart', JSON.stringify(cart));
+        }
+
+        function renderCart() {
+            const cartItemsContainer = document.querySelector('.cart-items');
+
+            if (cart.length === 0) {
+                cartItemsContainer.innerHTML = `
+            <div class="empty-cart">
+                <div class="empty-message">No items in basket</div>
+            </div>
+        `;
+                return;
+            }
+
+            cartItemsContainer.innerHTML = cart.map(item => `
+        <div class="cart-item">
+            <img src="${item.image}" alt="${item.name}" class="item-image">
+            .<div class="item-content">
+                <div class="item-details">
+                <h4 class="item-name">${item.name}</h4>
+                <p class="item-price">$${item.price}</p>
+                <p class="item-color">${item.color.replace('-', ' ')}</p>
+            </div>
+            <div class="quantity-controls">
+                <button class="quantity-btn" onclick="updateCartQuantity(${item.productId}, '${item.color}', -1)">−</button>
+                <div class="quantity-display">${item.quantity}</div>
+                <button class="quantity-btn" onclick="updateCartQuantity(${item.productId}, '${item.color}', 1)">+</button>
+            </div>
+            </div>
+        </div>
+    `).join('');
+        }
+
+        function updateCartDisplay() {
+            const totalQuantity = cart.reduce((sum, item) => sum + item.quantity, 0);
+        
+            const cartBadges = ['cart-badge', 'mobile-cart-badge', 'menu-cart-badge'];
+            cartBadges.forEach(badgeId => {
+                const badge = document.getElementById(badgeId);
+                if (badge) {
+                    badge.textContent = totalQuantity;
+                    if (totalQuantity === 0) {
+                        badge.classList.add('hidden');
+                    } else {
+                        badge.classList.remove('hidden');
+                    }
+                }
+            });
+        }
+
+        function loadCartCount() {
+            const savedCart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart = savedCart;
+            updateCartDisplay();
+        }
+
+        function updateCartQuantity(productId, color, change) {
+            const itemIndex = cart.findIndex(item =>
+                item.productId === productId && item.color === color
+            );
+
+            if (itemIndex !== -1) {
+                cart[itemIndex].quantity += change;
+
+                if (cart[itemIndex].quantity <= 0) {
+                    cart.splice(itemIndex, 1);
+                }
+
+                saveCart();
+                renderCart();
+                updateCartSummary();
+                updateCartDisplay();
+            }
+        }
+
+        function updateCartSummary() {
+            const subtotal = cart.reduce((total, item) => total + (item.price * item.quantity), 0);
+
+            document.getElementById('subtotal-price').textContent = `$${subtotal}`;
+            document.getElementById('total-price').textContent = `$${subtotal}`;
+            document.getElementById('total-price-bottom').textContent = `$${subtotal}`;
+
+            const checkoutBtn = document.querySelector('.checkout-btn');
+            if (checkoutBtn) {
+                if (cart.length > 0) {
+                    checkoutBtn.disabled = false;
+                    checkoutBtn.textContent = 'Checkout';
+                } else {
+                    checkoutBtn.disabled = true;
+                    checkoutBtn.textContent = 'Checkout';
+                }
+            }
+        }
+
+        function proceedToCheckout() {
+            if (cart.length === 0) {
+                alert('Your cart is empty!');
+                return;
+            }
+            window.location.href = 'payment.html';
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            loadCart();
+            loadCartCount();
+        });
+        window.addEventListener('storage', function (e) {
+            if (e.key === 'cart') {
+                loadCartCount();
+                loadCart();
+            }
+        });
+
+    </script> 
 </body>
 </html>
