@@ -567,7 +567,7 @@
             }
 
             productlist.innerHTML = sortedProducts.map(product => `
-                <div class="product-item" onclick="goToProductDetails(${product.id})">
+                <div class="product-item" onclick="goToProductdetails(${product.id})">
                     <img src="${product.image}" alt="${product.name}">
                     <div class="product-content">
                         <h4 class="name">${product.name}</h4>
@@ -594,8 +594,8 @@
             `).join('');
         }
 
-        function goToProductDetails(productId) {
-            window.location.href = `productDetails.html?id=${productId}`;
+        function goToproductdetails(productId) {
+            window.location.href = `productdetails.html?id=${productId}`;
         }
 
         function changeProductColor(productId, color) {
