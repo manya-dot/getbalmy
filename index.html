@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GetBalmy</title>
   <!-- Style -->
     <link rel="stylesheet" href="style/main.css" />
-    <link rel="stylesheet" href="style/menu.css" />
+    <link rel="stylesheet" href="style/common.css" />
+    <link rel="stylesheet" href="style/header.css" />
     <!-- Swiper CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css" />
-</head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css" />
+
+  </head>
 
 <body>
   <!-- Header -->
@@ -52,24 +53,24 @@
                   everyday elements, our lip balm is formulated to nourish while
                   adding a subtle touch of shimmer, tint, and flavor.
                 </p>
-                <a href="#" class="discover_btn">Discover Now</a>
+                <a href="productlist.html" class="discover_btn">Discover Now</a>
               </div>
               <div class="right-content">
-                <a href="#">
+                <a href="productlist.html">
                   <span>Bracelets</span>
                   <img
                     class="right-arrow"
                     src="./assets/icon/right_arrow.png"
                     alt="right arrow icon" />
                 </a>
-                <a href="#">
+                <a href="productlist.html">
                   <span>Rings</span>
                   <img
                     class="right-arrow"
                     src="./assets/icon/right_arrow.png"
                     alt="right arrow icon" />
                 </a>
-                <a href="#">
+                <a href="productlist.html">
                   <span>Necklaces</span>
                   <img
                     class="right-arrow"
@@ -90,7 +91,7 @@
             <img src="./assets/images/second-logo.png" alt="" />
           </div>
           <div class="menu-icons">
-            <div class="cart-icon">
+            <div class="cart-icon" onclick="window.location.href='cart.html'">
               <img src="./assets/images/basket icon.png" alt="" />
             </div>
             <div class="close-icon" id="close-icon">
@@ -114,13 +115,14 @@
 
         <!-- Navigation Menu -->
         <nav class="menu-navigation">
-          <a href="#" class="nav-item">Shop Rings</a>
-          <a href="#" class="nav-item">Shop Bracelets</a>
-          <a href="#" class="nav-item">Shop Necklaces</a>
-          <a href="#" class="nav-item">Shop Accessories</a>
+          <a href="productlist.html" class="nav-item">Shop Rings</a>
+          <a href="productlist.html" class="nav-item">Shop Bracelets</a>
+          <a href="productlist.html" class="nav-item">Shop Necklaces</a>
+          <a href="productlist.html" class="nav-item">Shop Accessories</a>
         </nav>
       </div>
-  <!-- slider -->
+
+  <!-- Mock Instagram Slider -->
       <section class="slider-section">
         <div class="container">
           <h2>As seen on</h2>
@@ -249,35 +251,11 @@
                   <p>Mum hack ✅</p>
                 </div>
               </div>
-
-              <div class="swiper-slide">
-                <div class="slider-item-image">
-                  <img
-                    src="./assets/images/home/products/image 31.png"
-                    alt="" />
-                </div>
-                <div class="slider-item-content">
-                  <div class="slider-item-icons">
-                    <div class="icon-placeholder1">
-                      <img src="./assets/icon/heart icon.png" alt="" />
-                      <img src="./assets/icon/comment icon.png" alt="" />
-                    </div>
-                    <div class="icon-placeholder2">
-                      <img src="./assets/icon/share icon.png" alt="" />
-                    </div>
-                  </div>
-                  <h4>@getbalmy</h4>
-                  <p>I don’t leave home 🏠 without it!</p>
-                  <p>Cute ring ✅</p>
-                  <p>Lip balm on hand ✅</p>
-                  <p>Feeling put together ✅</p>
-                  <p>Mum hack ✅</p>
-                </div>
-              </div>
             </div>
           </div>
         </div>
       </section>
+
       <!-- About Section -->
       <section class="we-are">
         <div class="container">
@@ -299,7 +277,8 @@
           </div>
         </div>
       </section>
-      <!-- categories -->
+
+      <!-- Categories -->
       <section class="categories">
         <div class="container">
           <div class="categories-inner">
@@ -311,36 +290,40 @@
                 style="
                   background-image: url('./assets/images/home/category/image 3.png');
                 ">
-                <a href="#" class="categories-btn"> SHOP BRACELETS </a>
+                <a href="productlist.html" class="categories-btn"> SHOP BRACELETS </a>
               </div>
+
               <!-- item2 -->
               <div
                 class="categories-item"
                 style="
                   background-image: url('./assets/images/home/category/image 4.png');
                 ">
-                <a href="#" class="categories-btn"> SHOP RINGS </a>
+                <a href="productlist.html" class="categories-btn"> SHOP RINGS </a>
               </div>
+
               <!-- item3 -->
               <div
                 class="categories-item"
                 style="
                   background-image: url('./assets/images/home/category//image 5.png');
                 ">
-                <a href="#" class="categories-btn"> SHOP ACCESSORIES </a>
+                <a href="productlist.html" class="categories-btn"> SHOP ACCESSORIES </a>
               </div>
+
               <!-- item4 -->
               <div
                 class="categories-item"
                 style="
                   background-image: url('./assets/images/home/category/image 6.png');
                 ">
-                <a href="#" class="categories-btn"> SHOP NECKLACES </a>
+                <a href="productlist.html" class="categories-btn"> SHOP NECKLACES </a>
               </div>
             </div>
           </div>
         </div>
       </section>
+
        <!-- Mailing List Sign Up -->
       <section class="signup-container">
         <div class="container">
@@ -373,28 +356,30 @@
           </div>
         </div>
       </section>
+ </main>
 
-      <!-- Footer -->
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-inner">
-          <ul>
-            <li class="list-head">Links</li>
-            <li><a href="#">Contact Us</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">FAQs</a></li>
-            <li><a href="#">Terms and Conditions</a></li>
-          </ul>
-        </div>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <ul>
+          <li class="list-head">Links</li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">Terms and Conditions</a></li>
+        </ul>
       </div>
-    </footer>
+    </div>
+  </footer>
 
-     <!-- Swiper JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+    <!-- Swiper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
 
-    <!-- main script -->
-    <script src="script/main.js"></script>
-    <script src="script/common.js"></script>
+  <!-- main script -->
+  <script src="script/main.js"></script>
+  <script src="script/common.js"></script>
     
 </body>
+
 </html>
