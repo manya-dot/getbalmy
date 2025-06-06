@@ -2,384 +2,333 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GetBalmy</title>
-  <!-- Style -->
-    <link rel="stylesheet" href="style/main.css" />
-    <link rel="stylesheet" href="style/common.css" />
-    <link rel="stylesheet" href="style/header.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Balmy</title>
+    <!-- style -->
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/common.css">
+    <link rel="stylesheet" href="style/header.css">
     <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css">
 
-  </head>
+</head>
 
 <body>
-  <!-- Header -->
+    <!-- header -->
     <main class="main-content">
-      <!-- Banner -->
-      <section class="banner">
+        <!-- banner -->
+        <section class="banner">
+            <div class="container">
+                <div class="banner-inner">
+                    <!-- large logo -->
+                    <div class="logo">
+                        <img src="./assets/images/main_logo.png" alt="Get balmy">
+                    </div>
+                    <!-- mobile navbar -->
+                    <div class="mobile-navbar">
+                        <div class="left-side">
+                            <div class="second-logo">
+                                <img src="./assets/images/second-logo.png" alt="">
+                            </div>
+                        </div>
+
+                        <div class="right-side">
+                            <div class="cart" onclick="window.location.href='cart.html'">
+                                <img src="./assets/images/basket icon.png" alt="">
+                            </div>
+                            <div class="three-dot" id="three-dot">
+                                <img src="./assets/images/menu.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="banner-content">
+                        <div class="left-content">
+                            <h3>2025 Collection</h3>
+                            <p>Say goodbye to dry lips and hello to all-day hydration with our SPF 15 lip balm, designed
+                                to
+                                keep
+                                your lips soft, smooth, and sun-protected. Whether you’re out in the sun or facing
+                                everyday
+                                elements, our lip balm is formulated to nourish while adding a subtle touch of shimmer,
+                                tint,
+                                and flavor.</p>
+                            <a href="productList.html" class="discover_btn">Discover Now</a>
+                        </div>
+                        <div class="right-content">
+                            <a href="productList.html">
+                                <span>Bracelets</span>
+                                <img class="right-arrow" src="./assets/icon/right_arrow.png" alt="right arrow icon">
+                            </a>
+                            <a href="productList.html">
+                                <span>Rings</span>
+                                <img class="right-arrow" src="./assets/icon/right_arrow.png" alt="right arrow icon">
+                            </a>
+                            <a href="productList.html">
+                                <span>Necklaces</span>
+                                <img class="right-arrow" src="./assets/icon/right_arrow.png" alt="right arrow icon">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- mobile menu -->
+        <div class="mobile-menu">
+            <!-- Header with Logo and Icons -->
+            <div class="menu-header">
+                <div class="logo">
+                    <img src="./assets/images/second-logo.png" alt="">
+                </div>
+                <div class="menu-icons">
+                    <div class="cart-icon" onclick="window.location.href='cart.html'">
+                        <img src="./assets/images/basket icon.png" alt="">
+                    </div>
+                    <div class="close-icon" id="close-icon">
+                        <img src="./assets/icon/cross.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Search Section -->
+            <div class="search-section">
+                <div class="search-container">
+                    <div class="search-icon"> <img src="./assets/icon/search.png" alt=""></div>
+                    <input type="text" class="search-input" placeholder="Search for bracelets">
+                </div>
+            </div>
+
+            <!-- Navigation Menu -->
+            <nav class="menu-navigation">
+                <a href="productList.html" class="nav-item">Shop Rings</a>
+                <a href="productList.html" class="nav-item">Shop Bracelets</a>
+                <a href="productList.html" class="nav-item">Shop Necklaces</a>
+                <a href="productList.html" class="nav-item">Shop Accessories</a>
+            </nav>
+        </div>
+
+        <!-- slider -->
+        <section class="slider-section">
+            <div class="container">
+                <h2>As seen on</h2>
+                <div class="swiper mySwiper1">
+                    <div class="swiper-wrapper" id="sliderTrack">
+                        <!-- Slider Item 1 -->
+                        <div class="swiper-slide">
+                            <div class="slider-item-image">
+                                <img src="./assets/images/home/products/image 31.png" alt="">
+                            </div>
+                            <div class="slider-item-content">
+                                <div class="slider-item-icons">
+                                    <div class="icon-placeholder1">
+                                        <img src="./assets/icon/heart icon.png" alt="">
+                                        <img src="./assets/icon/comment icon.png" alt="">
+                                    </div>
+                                    <div class="icon-placeholder2"><img src="./assets/icon/share icon.png" alt=""></div>
+                                </div>
+                                <h4>@getbalmy</h4>
+                                <p>I don’t leave home 🏠 without it!</p>
+                                <p>Cute ring ✅</p>
+                                <p>Lip balm on hand ✅</p>
+                                <p>Feeling put together ✅</p>
+                                <p>Mum hack ✅</p>
+                            </div>
+                        </div>
+
+                        <!-- Slider Item 2 -->
+                        <div class="swiper-slide">
+                            <div class="slider-item-image">
+                                <img src="./assets/images/home/products/image 33.png" alt="">
+                            </div>
+                            <div class="slider-item-content">
+                                <div class="slider-item-icons">
+                                    <div class="icon-placeholder1">
+                                        <img src="./assets/icon/heart icon.png" alt="">
+                                        <img src="./assets/icon/comment icon.png" alt="">
+                                    </div>
+                                    <div class="icon-placeholder2"><img src="./assets/icon/share icon.png" alt=""></div>
+                                </div>
+                                <h4>@rhiannonburnsugc</h4>
+                            </div>
+                        </div>
+
+                        <!-- Slider Item 3 -->
+                        <div class="swiper-slide">
+                            <div class="slider-item-image">
+                                <img src="./assets/images/home/products/image 32.png" alt="">
+                            </div>
+                            <div class="slider-item-content">
+                                <div class="slider-item-icons">
+                                    <div class="icon-placeholder1">
+                                        <img src="./assets/icon/heart icon.png" alt="">
+                                        <img src="./assets/icon/comment icon.png" alt="">
+                                    </div>
+                                    <div class="icon-placeholder2"><img src="./assets/icon/share icon.png" alt=""></div>
+                                </div>
+                                <h4>@cchelseacole</h4>
+                                <p>hair: @hairbysum_ellisperr</p>
+                                <p>@ellisperryhair</p>
+                                <p>jewellery: @getbalmy @lovisajewellery</p>
+                                <p>clothing: @cottonon</p>
+                                <p>makeup: @meccabeauty</p>
+                            </div>
+                        </div>
+
+                        <!-- Slider Item 4 -->
+                        <div class="swiper-slide">
+                            <div class="slider-item-image">
+                                <img src="./assets/images/home/products/image 34.png" alt="">
+                            </div>
+                            <div class="slider-item-content">
+                                <div class="slider-item-icons">
+                                    <div class="icon-placeholder1">
+                                        <img src="./assets/icon/heart icon.png" alt="">
+                                        <img src="./assets/icon/comment icon.png" alt="">
+                                    </div>
+                                    <div class="icon-placeholder2"><img src="./assets/icon/share icon.png" alt=""></div>
+                                </div>
+                                <h4>@tam_jane_mitchell</h4>
+                                <p>Too the moon and back 🌙🚀🥳</p>
+                                <p> &nbsp; </p>
+                                <p>Fun weekend away for @lucaborruso </p>
+                                <p>and @_julaaaa wedding 🥳🥳🥳💖💖💖💖</p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="swiper-slide">
+                            <div class="slider-item-image">
+                                <img src="./assets/images/home/products/image 31.png" alt="">
+                            </div>
+                            <div class="slider-item-content">
+                                <div class="slider-item-icons">
+                                    <div class="icon-placeholder1">
+                                        <img src="./assets/icon/heart icon.png" alt="">
+                                        <img src="./assets/icon/comment icon.png" alt="">
+                                    </div>
+                                    <div class="icon-placeholder2"><img src="./assets/icon/share icon.png" alt=""></div>
+                                </div>
+                                <h4>@getbalmy</h4>
+                                <p>I don’t leave home 🏠 without it!</p>
+                                <p>Cute ring ✅</p>
+                                <p>Lip balm on hand ✅</p>
+                                <p>Feeling put together ✅</p>
+                                <p>Mum hack ✅</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- about section -->
+        <section class="we-are">
+            <div class="container">
+                <div class="we-are-content">
+                    <h3>WHO ARE WE</h3>
+                    <p>
+                        The idea for my lip balm bracelet business came to me after a long day of beach fun on holiday,
+                        sitting around a campfire with friends when I found myself without my lip balm and wishing for a
+                        more convenient and stylish way to carry it with me at all times. When we got back to our tent
+                        that
+                        night I said to my hubby, I have an amazing idea and spent the rest of the night thinking of the
+                        endless possibilities! (I didn't get a wink of sleep that night between my excitement and my 2
+                        month
+                        old hehe). Over the next week I researched until my fingers cramped and discovered there was
+                        nothing
+                        else like it on the market. And just like that Balmy was born!
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- categories -->
+        <section class="categories">
+            <div class="container">
+                <div class="categories-inner">
+                    <h3>SHOP OUR RANGES</h3>
+                    <div class="categories-list">
+                        <!-- item1 -->
+                        <div class="categories-item"
+                            style="background-image: url('./assets/images/home/category/image 3.png');">
+                            <a href="productList.html" class="categories-btn">
+                                SHOP BRACELETS
+                            </a>
+                        </div>
+                        <!-- item2 -->
+                        <div class="categories-item"
+                            style="background-image: url('./assets/images/home/category/image 4.png');">
+                            <a href="productList.html" class="categories-btn">
+                                SHOP RINGS
+                            </a>
+                        </div>
+                        <!-- item3 -->
+                        <div class="categories-item"
+                            style="background-image: url('./assets/images/home/category//image 5.png');">
+                            <a href="productList.html" class="categories-btn">
+                                SHOP ACCESSORIES
+                            </a>
+                        </div>
+                        <!-- item4 -->
+                        <div class="categories-item"
+                            style="background-image: url('./assets/images/home/category/image 6.png');">
+                            <a href="productList.html" class="categories-btn">
+                                SHOP NECKLACES
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- sign up -->
+        <section class="signup-container">
+            <div class="container">
+                <div class="signup-inner">
+                    <h1>shhh... welcome to our list!</h1>
+
+                    <form>
+                        <div class="form-group">
+                            <label for="name">NAME</label>
+                            <input type="text" id="name" name="name" placeholder="Enter Name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">EMAIL</label>
+                            <input type="email" id="email" name="email" placeholder="Enter Email" required>
+                        </div>
+
+                        <button type="submit" class="submit-btn">join now!</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- footer -->
+
+    <footer class="footer">
         <div class="container">
-          <div class="banner-inner">
-            <!-- Large Logo -->
-            <div class="logo">
-              <img src="./assets/images/main_logo.png" alt="Get balmy" />
+            <div class="footer-inner">
+                <ul>
+                    <li class="list-head">Links</li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Terms and Conditions</a></li>
+                </ul>
             </div>
-            <!-- Mobile Navbar -->
-            <div class="mobile-navbar">
-              <div class="left-side">
-                <div class="second-logo">
-                  <img src="./assets/images/second-logo.png" alt="" />
-                </div>
-              </div>
-
-              <div class="right-side">
-                <div class="cart">
-                  <img src="./assets/images/basket icon.png" alt="" />
-                </div>
-                <div class="three-dot" id="three-dot">
-                  <img src="./assets/images/menu.png" alt="" />
-                </div>
-              </div>
-            </div>
-
-            <div class="banner-content">
-              <div class="left-content">
-                <h3>2025 Collection</h3>
-                <p>
-                  Say goodbye to dry lips and hello to all-day hydration with
-                  our SPF 15 lip balm, designed to keep your lips soft, smooth,
-                  and sun-protected. Whether you’re out in the sun or facing
-                  everyday elements, our lip balm is formulated to nourish while
-                  adding a subtle touch of shimmer, tint, and flavor.
-                </p>
-                <a href="productlist.html" class="discover_btn">Discover Now</a>
-              </div>
-              <div class="right-content">
-                <a href="productlist.html">
-                  <span>Bracelets</span>
-                  <img
-                    class="right-arrow"
-                    src="./assets/icon/right_arrow.png"
-                    alt="right arrow icon" />
-                </a>
-                <a href="productlist.html">
-                  <span>Rings</span>
-                  <img
-                    class="right-arrow"
-                    src="./assets/icon/right_arrow.png"
-                    alt="right arrow icon" />
-                </a>
-                <a href="productlist.html">
-                  <span>Necklaces</span>
-                  <img
-                    class="right-arrow"
-                    src="./assets/icon/right_arrow.png"
-                    alt="right arrow icon" />
-                </a>
-              </div>
-            </div>
-          </div>
         </div>
-      </section>
-
-    <!-- Mobile Menu -->
-      <div class="mobile-menu">
-        <!-- Header with Logo and Icons -->
-        <div class="menu-header">
-          <div class="logo">
-            <img src="./assets/images/second-logo.png" alt="" />
-          </div>
-          <div class="menu-icons">
-            <div class="cart-icon" onclick="window.location.href='cart.html'">
-              <img src="./assets/images/basket icon.png" alt="" />
-            </div>
-            <div class="close-icon" id="close-icon">
-              <img src="./assets/icon/cross.png" alt="" />
-            </div>
-          </div>
-        </div>
-
-        <!-- Search Section -->
-        <div class="search-section">
-          <div class="search-container">
-            <div class="search-icon">
-              <img src="./assets/icon/search.png" alt="" />
-            </div>
-            <input
-              type="text"
-              class="search-input"
-              placeholder="Search for bracelets" />
-          </div>
-        </div>
-
-        <!-- Navigation Menu -->
-        <nav class="menu-navigation">
-          <a href="productlist.html" class="nav-item">Shop Rings</a>
-          <a href="productlist.html" class="nav-item">Shop Bracelets</a>
-          <a href="productlist.html" class="nav-item">Shop Necklaces</a>
-          <a href="productlist.html" class="nav-item">Shop Accessories</a>
-        </nav>
-      </div>
-
-  <!-- Mock Instagram Slider -->
-      <section class="slider-section">
-        <div class="container">
-          <h2>As seen on</h2>
-          <div class="swiper mySwiper">
-            <div class="swiper-wrapper" id="sliderTrack">
-              <!-- Slider Item 1 -->
-              <div class="swiper-slide">
-                <div class="slider-item-image">
-                  <img
-                    src="./assets/images/home/products/image 31.png"
-                    alt="" />
-                </div>
-                <div class="slider-item-content">
-                  <div class="slider-item-icons">
-                    <div class="icon-placeholder1">
-                      <img src="./assets/icon/heart icon.png" alt="" />
-                      <img src="./assets/icon/comment icon.png" alt="" />
-                    </div>
-                    <div class="icon-placeholder2">
-                      <img src="./assets/icon/share icon.png" alt="" />
-                    </div>
-                  </div>
-                  <h4>@getbalmy</h4>
-                  <p>I don’t leave home 🏠 without it!</p>
-                  <p>Cute ring ✅</p>
-                  <p>Lip balm on hand ✅</p>
-                  <p>Feeling put together ✅</p>
-                  <p>Mum hack ✅</p>
-                </div>
-              </div>
-
-              <!-- Slider Item 2 -->
-              <div class="swiper-slide">
-                <div class="slider-item-image">
-                  <img
-                    src="./assets/images/home/products/image 33.png"
-                    alt="" />
-                </div>
-                <div class="slider-item-content">
-                  <div class="slider-item-icons">
-                    <div class="icon-placeholder1">
-                      <img src="./assets/icon/heart icon.png" alt="" />
-                      <img src="./assets/icon/comment icon.png" alt="" />
-                    </div>
-                    <div class="icon-placeholder2">
-                      <img src="./assets/icon/share icon.png" alt="" />
-                    </div>
-                  </div>
-                  <h4>@rhiannonburnsugc</h4>
-                </div>
-              </div>
-
-              <!-- Slider Item 3 -->
-              <div class="swiper-slide">
-                <div class="slider-item-image">
-                  <img
-                    src="./assets/images/home/products/image 32.png"
-                    alt="" />
-                </div>
-                <div class="slider-item-content">
-                  <div class="slider-item-icons">
-                    <div class="icon-placeholder1">
-                      <img src="./assets/icon/heart icon.png" alt="" />
-                      <img src="./assets/icon/comment icon.png" alt="" />
-                    </div>
-                    <div class="icon-placeholder2">
-                      <img src="./assets/icon/share icon.png" alt="" />
-                    </div>
-                  </div>
-                  <h4>@cchelseacole</h4>
-                  <p>hair: @hairbysum_ellisperr</p>
-                  <p>@ellisperryhair</p>
-                  <p>jewellery: @getbalmy @lovisajewellery</p>
-                  <p>clothing: @cottonon</p>
-                  <p>makeup: @meccabeauty</p>
-                </div>
-              </div>
-
-              <!-- Slider Item 4 -->
-              <div class="swiper-slide">
-                <div class="slider-item-image">
-                  <img
-                    src="./assets/images/home/products/image 34.png"
-                    alt="" />
-                </div>
-                <div class="slider-item-content">
-                  <div class="slider-item-icons">
-                    <div class="icon-placeholder1">
-                      <img src="./assets/icon/heart icon.png" alt="" />
-                      <img src="./assets/icon/comment icon.png" alt="" />
-                    </div>
-                    <div class="icon-placeholder2">
-                      <img src="./assets/icon/share icon.png" alt="" />
-                    </div>
-                  </div>
-                  <h4>@tam_jane_mitchell</h4>
-                  <p>Too the moon and back 🌙🚀🥳</p>
-                  <p>&nbsp;</p>
-                  <p>Fun weekend away for @lucaborruso</p>
-                  <p>and @_julaaaa wedding 🥳🥳🥳💖💖💖💖</p>
-                </div>
-              </div>
-
-              <!-- Additional items for sliding -->
-              <div class="swiper-slide">
-                <div class="slider-item-image">
-                  <img
-                    src="./assets/images/home/products/image 31.png"
-                    alt="" />
-                </div>
-                <div class="slider-item-content">
-                  <div class="slider-item-icons">
-                    <div class="icon-placeholder1">
-                      <img src="./assets/icon/heart icon.png" alt="" />
-                      <img src="./assets/icon/comment icon.png" alt="" />
-                    </div>
-                    <div class="icon-placeholder2">
-                      <img src="./assets/icon/share icon.png" alt="" />
-                    </div>
-                  </div>
-                  <h4>@getbalmy</h4>
-                  <p>I don’t leave home 🏠 without it!</p>
-                  <p>Cute ring ✅</p>
-                  <p>Lip balm on hand ✅</p>
-                  <p>Feeling put together ✅</p>
-                  <p>Mum hack ✅</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- About Section -->
-      <section class="we-are">
-        <div class="container">
-          <div class="we-are-content">
-            <h3>WHO ARE WE</h3>
-            <p>
-              The idea for my lip balm bracelet business came to me after a long
-              day of beach fun on holiday, sitting around a campfire with
-              friends when I found myself without my lip balm and wishing for a
-              more convenient and stylish way to carry it with me at all times.
-              When we got back to our tent that night I said to my hubby, I have
-              an amazing idea and spent the rest of the night thinking of the
-              endless possibilities! (I didn't get a wink of sleep that night
-              between my excitement and my 2 month old hehe). Over the next week
-              I researched until my fingers cramped and discovered there was
-              nothing else like it on the market. And just like that Balmy was
-              born!
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- Categories -->
-      <section class="categories">
-        <div class="container">
-          <div class="categories-inner">
-            <h3>SHOP OUR RANGES</h3>
-            <div class="categories-list">
-              <!-- item1 -->
-              <div
-                class="categories-item"
-                style="
-                  background-image: url('./assets/images/home/category/image 3.png');
-                ">
-                <a href="productlist.html" class="categories-btn"> SHOP BRACELETS </a>
-              </div>
-
-              <!-- item2 -->
-              <div
-                class="categories-item"
-                style="
-                  background-image: url('./assets/images/home/category/image 4.png');
-                ">
-                <a href="productlist.html" class="categories-btn"> SHOP RINGS </a>
-              </div>
-
-              <!-- item3 -->
-              <div
-                class="categories-item"
-                style="
-                  background-image: url('./assets/images/home/category//image 5.png');
-                ">
-                <a href="productlist.html" class="categories-btn"> SHOP ACCESSORIES </a>
-              </div>
-
-              <!-- item4 -->
-              <div
-                class="categories-item"
-                style="
-                  background-image: url('./assets/images/home/category/image 6.png');
-                ">
-                <a href="productlist.html" class="categories-btn"> SHOP NECKLACES </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-       <!-- Mailing List Sign Up -->
-      <section class="signup-container">
-        <div class="container">
-          <div class="signup-inner">
-            <h1>shhh... welcome to our list!</h1>
-
-            <form>
-              <div class="form-group">
-                <label for="name">NAME</label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  placeholder="Enter Name"
-                  required />
-              </div>
-
-              <div class="form-group">
-                <label for="email">EMAIL</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="Enter Email"
-                  required />
-              </div>
-
-              <button type="submit" class="submit-btn">join now!</button>
-            </form>
-          </div>
-        </div>
-      </section>
- </main>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-inner">
-        <ul>
-          <li class="list-head">Links</li>
-          <li><a href="#">Contact Us</a></li>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">FAQs</a></li>
-          <li><a href="#">Terms and Conditions</a></li>
-        </ul>
-      </div>
-    </div>
-  </footer>
+    </footer>
 
     <!-- Swiper JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
 
-  <!-- main script -->
-  <script src="script/main.js"></script>
-  <script src="script/common.js"></script>
-    
+    <!-- main script -->
+    <script src="script/main.js"></script>
+    <script src="script/common.js"></script>
 </body>
 
 </html>
