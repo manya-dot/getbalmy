@@ -143,10 +143,10 @@
             </div>
         </div>
 
-        <!-- main area -->
+        <!-- Main Area -->
         <section class="main-area">
             <div class="container">
-                <!-- sidebar -->
+                <!-- Sidebar -->
                 <div class="sidebar" id="sidebar">
                     <!-- Price Filter -->
                     <div class="price-filter">
@@ -168,7 +168,7 @@
                         </div>
                     </div>
 
-                    <!-- price filter -->
+                    <!-- Price Filter -->
                     <div class="filter-section">
                         <div class="filter-title" onclick="toggleFilter('price')">
                             Price
@@ -229,7 +229,8 @@
                 </div>
                 <!-- Product List -->
                 <div class="product-list" id="product-list">
-
+                    </div class="product-item" onclick="gotoproductdetails"> 
+                    </div>
                 </div>
         </section>
     </main>
@@ -267,7 +268,7 @@
                 id: 2,
                 name: "Original Bracelet",
                 price: 67,
-                image: "./assets/images/products/Original Bracelet.png",
+                image: "./assets/images/products/image 10.png",
                 colors: ["gold", "silver"],
                 selectedColor: "gold",
                 quantity: 0,
@@ -277,7 +278,7 @@
                 id: 3,
                 name: "Surf Bracelet",
                 price: 57,
-                image: "./assets/images/products/image 12.png",
+                image: "./assets/images/products/image 9.png",
                 colors: ["gold", "silver"],
                 selectedColor: "gold",
                 quantity: 0,
@@ -297,7 +298,7 @@
                 id: 5,
                 name: "Love Bracelet",
                 price: 67,
-                image: "./assets/images/products/Surf Bracelet.png",
+                image: "./assets/images/products/image 12.png",
                 colors: ["rose-gold", "silver"],
                 selectedColor: "rose-gold",
                 quantity: 0,
@@ -567,7 +568,7 @@
             }
 
             productlist.innerHTML = sortedProducts.map(product => `
-                <div class="product-item" onclick="goToProductdetails(${product.id})">
+                <div class="product-item" onclick="gotoproductdetails(${product.id})">
                     <img src="${product.image}" alt="${product.name}">
                     <div class="product-content">
                         <h4 class="name">${product.name}</h4>
@@ -594,7 +595,7 @@
             `).join('');
         }
 
-        function goToproductdetails(productId) {
+        function gotoproductdetails(productId) {
             window.location.href = `productdetails.html?id=${productId}`;
         }
 
